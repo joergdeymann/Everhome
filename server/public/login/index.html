@@ -297,15 +297,45 @@ window.onload = function() {
         );
     }
 
-    .input-fade {
-        -webkit-mask-image: linear-gradient(to bottom, transparent, black 80px, black calc(100% - 80px), transparent),
-                            linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
-        
-        /* Kombiniert beide Masken, sodass sie sich kreuzen */
-        -webkit-mask-composite: source-in;
-        mask-composite: intersect;
-    }
+.input-fade {
+    /* Standard */
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 80px,
+            black calc(100% - 80px),
+            transparent
+        ),
+        linear-gradient(
+            to right,
+            transparent,
+            black 40px,
+            black calc(100% - 40px),
+            transparent
+        );
 
+    mask-composite: intersect;
+
+    /* WebKit / Chrome / Safari */
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 80px,
+            black calc(100% - 80px),
+            transparent
+        ),
+        linear-gradient(
+            to right,
+            transparent,
+            black 40px,
+            black calc(100% - 40px),
+            transparent
+        );
+
+    -webkit-mask-composite: source-in;
+}
 
     .input-block {
         position: absolute;
@@ -324,9 +354,6 @@ window.onload = function() {
         justify-content: center;
         align-items: center;
         width: 100%;
-    }
-    .input-area-background {
-
     }
 
     .input-area-foreground {

@@ -5,3 +5,5 @@
 - git config --global cor.autocrlf true aufgerufen
 - .gitignore erstellt in Root
 - git rm -r --cached server/node_modules/
+- git config core.autocrlf false
+(git config --global push.autoSetupRemote true) würde eine extra eingabe bei neun brach vereinfachen
