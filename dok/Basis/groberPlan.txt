@@ -31,6 +31,4 @@ Es soll eine Übersichtsbuch geben in dem man grundlegend alles sieht was für I
 - NPC 
 - Grundkonzept: Name Startdatum, Ziele, Forderungen
 - Zusammenarbeit mit den Berufen
-
-
 	
