@@ -1,0 +1,255 @@
+:root {
+   --bg: #101713;
+   --panel: #18231d;
+   --panel2: #202e26;
+   --text: #edf4ee;
+   --muted: #aebbb0;
+   --accent: #7fbe73;
+   --accent2: #d9ad61;
+   --line: #324338;
+   --hover: rgb(165, 110, 7);
+}
+
+* {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   background: linear-gradient(135deg, #0d1510, #17241b 50%, #111a15);
+   color: var(--text);
+   font-family:
+      Segoe UI,
+      Arial,
+      sans-serif;
+   line-height: 1.6;
+}
+header {
+   padding: 32px 7%;
+   padding-top: 8px;
+   border-bottom: 1px solid var(--line);
+   background: #0d1510cc;
+   position: sticky;
+   top: 0;
+   backdrop-filter: blur(10px);
+   z-index: 3;
+   display: flex;
+   flex-direction: column;
+}
+
+header h1 {
+   margin: 0;
+   padding-top: 0;
+   font-size: clamp(1.7rem, 4vw, 3rem);
+}
+header p {
+   margin: 0.3rem 0;
+   color: var(--muted);
+}
+
+header .headline-area {
+   display: flex;
+   flex-direction: row;
+}
+
+header .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    padding-right: 0.2em;
+}
+
+header .right {
+    flex:1;
+}
+
+nav {
+   margin-top: 14px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+nav a {
+   color: #dcebdc;
+   text-decoration: none;
+   background: #213126;
+   padding: 6px 10px;
+   border-radius: 8px;
+   font-size: 0.9rem;
+}
+nav a:hover {
+   background: #314a36;
+}
+main {
+   max-width: 1250px;
+   margin: auto;
+   padding: 35px 7% 70px;
+}
+.hero {
+   background: linear-gradient(120deg, #203c26, #16291e);
+   border: 1px solid #426148;
+   border-radius: 20px;
+   padding: 30px;
+   margin-bottom: 0px;
+   margin-bottom: 0.5em;
+}
+.grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 16px;
+}
+.card {
+   background: var(--panel);
+   border: 1px solid var(--line);
+   padding: 20px;
+   border-radius: 15px;
+}
+a.card:hover {
+    border-color: var(--hover);
+}
+a.card {
+    text-decoration:none;
+    display: block;
+}
+.card h3 {
+   margin-top: 0;
+   color: #b9dfb2;
+}
+h2 {
+   margin-top: 38px;
+   border-bottom: 1px solid var(--line);
+   padding-bottom: 8px;
+   color: #d7efd2;
+}
+.hero h2 {
+   margin-top: 0;
+}
+h3 {
+   color: #d9e8d8;
+}
+.tag {
+   position: relative;
+   display: inline-block;
+   background: #304c35;
+   border-radius: 999px;
+   padding: 3px 9px;
+   margin: 3px;
+   font-size: 0.82rem;
+}
+
+.chain * + * {
+   margin-left:calc(1em);
+}
+
+.chain * + *::before {
+   position: absolute;
+   left: -1.2em;
+   content: "→";
+   display: inline; /* Verhält sich wie reiner Text */
+   font-size: 0.82rem;   
+}
+
+.decided {
+   border-left: 5px solid var(--accent);
+}
+.open {
+   border-left: 5px solid var(--accent2);
+}
+table {
+   width: 100%;
+   border-collapse: collapse;
+   background: var(--panel);
+   margin: 15px 0;
+}
+th,
+td {
+   padding: 10px;
+   border: 1px solid var(--line);
+   text-align: left;
+}
+th {
+   background: #24372a;
+}
+a {
+   color: #9bd994;
+}
+.progress {
+   height: 10px;
+   background: #2b3830;
+   border-radius: 9px;
+   overflow: hidden;
+}
+.progress span {
+   display: block;
+   height: 100%;
+   background: var(--accent);
+}
+.note {
+   background: #27311e;
+   border-left: 4px solid var(--accent2);
+   padding: 14px;
+   border-radius: 8px;
+}
+.tree {
+   white-space: pre-line;
+   background: #132018;
+   padding: 18px;
+   border-radius: 12px;
+   border: 1px solid var(--line);
+}
+footer {
+   color: var(--muted);
+   padding-top: 40px;
+   font-size: 0.9rem;
+}
+
+h4 {
+   margin-bottom: 0.2em;
+}
+
+.todo {
+   margin-top: 0.5em;
+   background: #f4eedf;
+   color: #252820;
+   padding: 10px 25px;
+   border-radius: 18px;
+   border-left: 8px solid #c49a43;
+}
+.todo h2 {
+   margin: 0.0em 0;
+   color: #252820;
+} 
+.section {
+   position: relative;
+   background-color: rgba(255,255,255,0.03);
+   border-radius: 20px;
+   padding: 8px;
+   margin-left: 1em;
+   margin-top: 3em;
+
+}
+.section>h2 {
+   position: absolute;
+   left: 15px;
+   top: -1.6em;
+   height: 1.6em;
+   background-color: rgba(255,255,255,0.03);
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   border:var(--line) 1px solid;
+   border-bottom: none;
+   margin:0;
+   padding: 0 16px;
+   line-height: 1.5em;
+   font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+   header {
+      position: static;
+   }
+   main {
+      padding: 25px 5%;
+   }
+}

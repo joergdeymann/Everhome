@@ -1,0 +1,43 @@
+{
+    "effects": {
+        "poison": "Poison",
+        "healing": "Healing"
+    },
+
+    "animals": {
+        "fox": "Fox",
+        "cat": "Cat",
+        "dog": "Dog"
+    },
+
+    "actions": {
+        "sit": "Sit",
+        "walk": "Walk",
+        "run": "Run",
+        "sneak": "Sneak",
+        "makeSound": "Make Sound"
+    },
+
+    "attribute": {
+        "health": "Health",
+        "stamina": "Stamina",
+        "mana": "Mana",
+        "strength": "Strength",
+        "speed": "Speed",
+        "dexterity": "Dexterity",
+        "intelligence": "Intelligence",
+        "resistance": "Resistance",
+        "perception": "Perception"
+    },
+
+    "warning": {
+        "healthLow": "Health critical!",
+        "staminaLow": "Stamina low!"
+    },
+
+    "button": {
+        "startEffects": "Start Effects",
+        "stopEffects": "Stop Effects",
+        "restartEffects": "Restart Effects"
+    }
+}

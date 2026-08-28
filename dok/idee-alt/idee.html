@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everhome</title>
+<style>
+
+    h1,h2,h3,ul,li {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin-left: 2em;
+    }
+    ul {
+        margin-bottom: 0.5em;
+    }
+
+    body {
+        margin:auto;
+        width: 100vh;
+    }
+    body>div {
+        width: 80%;
+
+    }
+    header {
+        font-size: 3rem;
+    }
+
+    h1 {
+        margin-top: 0.5em;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        background-color: rgba(0,0,0,0.05);
+        font-size: 2em;
+    }
+    h2 {
+        background-color: rgba(0,0,0,0.08);
+        font-size: 1.2em;
+    }
+    h3 {
+        margin-left: 0.1em;
+        margin-top: 0.5em;
+        font-size: 1.2em;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+    }
+    .red {
+        color: red;
+    }
+    th {
+        text-align: left;
+    }
+    tr:nth-of-type(odd) {
+        background-color: rgba(0,0,0,0.05);
+    }
+
+</style>    
+</head>
+<body>
+    <div>
+
+    <header>Everhome</header>    
+    <ul>
+        <li>Alternativ: homeworld, homeland</li>
+    </ul>
+
+    <h1>1. Berufe</h1>
+    <h2>a) Schnellübersicht der Planung</h2>
+        <ul>
+            <li>Schmied</li>
+            <li>Bergmann: kann Steine abbaueen</li>
+            <li>Runenmacher</li>
+            <li>Juwelier</li>
+            <li>Alchemist</li>
+            <li>Sattler/Lederhandwerk</li>
+            <li>Landwirt, Naturberufe</li>
+            <li>Forscher, Entdecker</li>
+            <li>Magier</li>
+            <li>Verzauberer</li>
+            <li>Sammler</li>
+            <li>Transporteur</li>
+            <li>Handwerker(allgemein)</li>
+            <li>Händler</li>
+            <li>Holzfäller: Fälllt Holz</li>
+            <li>Erdgräber: Baut ab ua Lehm, spezielle Erden (Ton,Torf, Humus, Muttererde, Sand Kies, Kalk usw.)</li>
+            <li></li>
+        </ul>
+    <h2>b) Allgemeines für alle Berufe</h2>
+        <ul>
+            <li>Alle Berufe können über Rezepte / Baupläne usw was neues herstellen oder lernen</li>
+            <li>Alle Berufe haben einen Skillbaum</li>
+            <li>Skillpuntekönnen nicht komplett vertelt werden, man muss sich einen Bereich aussuchen und dort können bei voller auslastung eines Zweigs noch 25 % eingesetzt werden.</li>
+            <li>Durch den Baum kann man sich Spezialisieren in eine Richtung</li>
+            <li>Ein NPC kann zur untersctützung eiseuern , er ist ein grosse hilfe für viele Dinge die im Spiel etwas komplexer laufen</li>
+            <li>Grinden ist nicht das Ziel des Spiels</li>
+            <li>Sammer erhalten Wissen über Fundorte</li>
+            <li>entwickeln sich auch durch Nutzung</li>
+            <li>Je höher die Skillstufe desto besseres Werkzeug ann man nutzen</li>
+            <li>Je höher die Skillstufe desto besseres Werkzeug/Bau/Kleidung kann erstellt werden</li>
+            <li>Jede Verbesserung wird als Blatt freigeschalt</li>
+            <li>Man könnte auch eine Stufe einführen die die Anzahl der Fertigungen einen level erhöht, soll aber nicht zum Grinden führen nur das man nicht sofort weiter kommt</li>
+            
+        </ul>
+    <h2>c) Aufbau der Skillbäume</h2>
+        <ul>
+            <li>Der Skillbaum steht im Eingangsbereich im Eigenen Haus</li>
+            <li>Es gibt den Baumstamm, und Äste die daran wachsen, wenn man ein Blatt skillt, wächst er weiter und zeigt immer die nächste Stufe an</li>
+            <li>in einer besonderen Ansicht kann man die Stufen übersichtlich sehen und auch was man lernen kann wenn man alles lernen würde</li>
+            <li>ein Blatt skillt man in dem man darauf klickt und dann lernen bestätigt, es erschein das Blatt in gross (rangezoomt und dort steht alles genau)</li>
+            <li>Jeder der seinen Beruf ausführt und ein Teil erstellt Der Skillbaum steht im Eingangsbereich im Eigenen Haus</li>
+        </ul>
+    <h2>d) Verewigung</h2>
+        <ul>
+            <li>Jedes Teil was erstellt wird bekommt folgende Hinweise:
+                <ul>
+                    <li>Herstellung: Name und Datum</li>                        
+                    <li>Veränderung Liste: Name und Datum, was wurde gemacht</li>
+                    <li>Besitz Liste:Name und Datum </li>
+                </ul>
+            </li>
+            <li>Die Liste könnte so aussehen:
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Vorgang</th>
+                            <th>Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10.10.2026</td>
+                            <td>Hergestellt</td>
+                            <td>Peter Hauses</td>
+                        </tr>
+                        <tr>
+                            <td>11.10.2026</td>
+                            <td>Besitzübernahme</td>
+                            <td>Karl Schildkröte</td>
+                        </tr>
+                        <tr>
+                            <td>12.10.2026</td>
+                            <td>Rune eingebaut</td>
+                            <td>Siri Fisch</td>
+                        </tr>
+                        <tr>
+                            <td>12.10.2026</td>
+                            <td>Verzauberung</td>
+                            <td>Kai Wuschel</td>
+                        </tr>
+                        <tr>
+                            <td>01.12.2026</td>
+                            <td>Repariert</td>
+                            <td>Schmittchen Schleicher</td>
+                        </tr>
+                        <tr>
+                            <td>01.02.2027</td>
+                            <td>Verbessert</td>
+                            <td>Ficus Hanso</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>   
+
+
+    <h2>1.1 Schmied</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Beruf: Schmied</li>
+                <li>Handwerk: Schmiedekunst</li>                            
+                <li>Der Schmied, baut Gegenstände die für Everhome nützlich sind aus verscheiden Materialien</li>
+
+            </ul>
+        </li>
+        <li>Skillbaum
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+        <li>Werkzeuge
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+        <li>Maschinen
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>1.2 Transporter</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Transportiert Waren</li>
+                <li>lernt durch Erfahrung zusätzliche skillpunkte</li>
+                <li class="red">hat einen Skillbam der noch definiert werden muss</li>
+                <li>Transportiert Waren und bekommt für jeden Transport Gold oder Tauschware</li>
+                <li>Transporter vom Spieler zum Markt -> Auftraggeber zahlt den Transport</li>
+                <li>Transporter vom Markt zum Spieler -> Auftraggeber zahlt den Transport</li>
+                <li>Transporter Spieler zum Spieler -> im Normalfall zahlt der Empfäger, der Sender kann auch übernehmen</li>
+                <li>Es wird erwartet das der Transport in angemessener Zeit übernommen wird, wer rumtrödelt verliert 
+                    Ruf und das kann erheblich sein, wer sauber abliefert bekommt Bonuspunkte, so kann der Transporteur ausgesucht weren.
+                    Wenn die Ware gar nicht ankommt innerhalb angemesener Zeit,  wird der Auftrag gecanceltdi. 
+                    Ware die weder beim Empfänger und noch beim Sender ist wird vom Markt genommen und landet automatisch wieder beim Sender.
+                    Der Transporteur verliert 25% seiner gesammelten Bonuspunkte.
+                </li>
+                <li>Die Berechnung der Transportkosten ist Transportsatz * Wegstrecke * Menge * Wegqualität - Luftlinie</li>
+                <li>Besere Lasten</li>
+                <li>grössere Routen</li>
+                <li>Weniger Verschleiss</li>
+            </ul>
+
+
+        </li>
+
+    </ul>
+    <h2>1.3 Landwirt</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Produziert Pflanzen und Nahrung</li>
+                <li>Pflanzen schneller abbauen</li>
+                <li>bessere Ernte</li>
+                <li>neuePflanzenarten</li>
+            </ul>
+        </li>
+    </ul>   
+
+    <h2>1.4 Bergarbeiter</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Gewinnt Erz und Mineralien</li>
+                <li>Erz schneller abbauen</li>
+                <li>seltene Pfunde erkennen</li>
+            </ul>
+        </li>
+        <li>Allgemeine Stufen
+            <ul>
+                <li>Ânfänger
+                    <ul>
+                        <li>kann Erz abbauen</li>
+                    </ul>
+                </li>
+                <li>fortgeschrittener Bergarbeiter
+                    <ul>
+                        <li>kann schneller Erz abbauen</li>
+                    </ul>
+                </li>
+
+                <li>seltene Pfunde erkennen</li>
+            </ul>
+        </li>
+        <li>Skillbaum
+            <ul>
+                <li>Erz schneller abbauen</li>
+                <li>seltene Pfunde erkennen</li>
+            </ul>
+        </li>
+    </ul>   
+    
+
+
+    <h2>1.5 Handwerker(allgemein)</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Erstellt Produkte</li>
+                <li>bessere Qualität</li>
+                <li>weniger Materialverbrauch</li>
+                <li>lernt durch Rezepte die gefunden, erlernt oder erarbeitet wurden</li>
+            </ul>
+        </li>
+    </ul>   
+
+    <h2>1.6 Sammler(allgemein)</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Sammelt Primärstoffe</li>
+                <li>lernt Wissen über Fundorte</li>
+                <li>schaltet Werkzeuge frei</li>
+                <li>erhält möglichkeiten Werkzeuge zu verbessern und höherwertige Berufe zu lernen</li>
+            </ul>
+        </li>
+    </ul>   
+
+    <h2>1.7 Händler</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Verkauft waren</li>
+                <li>Könnte auf dem Markt arbeiten, daurch Vorteile für den Spieler rausholen</li>
+            </ul>
+        </li>
+    </ul>   
+
+    <h2>1.8 Techniker Baut Gegenstände</h2>
+    <ul>
+        <li>Allgemein
+            <ul>
+                <li>Baut Teile die andere Beruf nicht können</li>
+                <li>Die Idee ist durch den Bau von Spezialmaschinen wie die Fischblase entstanden</li>
+            </ul>            
+        </li>
+        <li>Herstellung von:
+            <ul>
+                <li>Fisch-Anzüge</li>
+                <li>Fluggeräte</li>
+                <li>Transportmaschinen</li>
+                <li>Spezialewrkzeuge</li>
+            </ul>
+            
+        </li>
+    </ul>   
+
+
+    
+
+    <h1>2 Gebäude</h1>
+    <h2>2.1 Welche Arten von Gebäude gibt es ?</h2>
+        <ul>
+            <li>Arbeisstätten (Hier können Maschinen und Geräte aufgestellt werden, es wird was hergestellt)</li>
+            <li>Wohngebäude (Hier wohnt der Spieler, er bekopmmt eins am anfang geschänkt)</li>
+            <li>Öffentliche Gebäude (Ruhmeshallen, Markt)</li>
+        </ul>
+
+    <h2>2.2 Welche Ausbauten gibt es ?</h2>
+        <ul>
+            <li>Lager</li>
+            <li>Geräteschuppen</li>
+            <li>Garagenplätze</li>
+            <li>Arbeitsbereich, Produktionsraum</li>
+            <li>Aussenbereich</li>
+            <br>
+            <li>Was wäre noch möglich</li>
+            <li>Werkstatt, Küche, Labor, Aquarium, Gewächshaus, Schlafzimmer, Maschinenraum, Brauerei, Lagerhalle, Trophäenraum</li>
+            <br>
+            <li>Ausbauten kosten Ressourcen und müssen vom Fachmann vergrösstert werden.</li>
+            <li>Jeder Raum ist wieder ein eigenes Modul</li>
+
+        </ul>
+
+    <h2>2.3 Wie kann man die Ausbauten gestalten  ?</h2>
+        <ul>
+            <li>Türen für die anderen Bereiche, flexibel erweiterbar, von ausserhalb des Gebäudes nich sichtbar</li>
+            <li>Türen und Tore nach aussen sichtbar von innen und Aussen</li>
+            <li>Türen und Tore kann man öffen Rolltore zb mit Kurbel öffnen</li>
+            <li>Räume individuell gestaltbar mit Möbel, Bilder, Verzierungen und vieles mehr</li>
+            <li>Aussenberreich des Gerbäudes auch frei gestaltbar, nicht auf klick sondern es muss von jemand mit Beruf erledigt werden.</li>
+            <li>Türen gehören zum Raum und dürfen nur geöffnet werden wenn der Raum zugänglich ist.</li>
+        </ul>
+
+    <h2>2.4 Wie findet die Erweiterung statt ?</h2>
+        <ul>
+            <li>Spieler mit Berufen bauen aus</li>
+            <li>Es werden Werkzeuge und Maschinen benötigt</li>
+        </ul>
+
+    <h2>2.5 Ausbauten Beschreibung</h2>
+        <ul>
+            <li>Hauptgebäude Werkstätte
+                <ul>
+                    <li>Eingangsbereich einer Werkstätte</li>
+                    <li>Türen für die anderen Bereiche, flexibel erweiterbar, von ausserhalb des Gebäudes nicht sichtbar</li>
+                    <li>grösste passt sich automatisch an, wenn was dazu gebaut wird, oder auf wunsch</li>
+                    <li>Die Grösse der Aussenansicht verändert sich nicht</li>
+                    <li>Jedes Gebäude hat ein Vorhof genügend Raum für Vegatation und Aussenstellpläze</li>
+                    <li>Es darf ausgesucht werden wo man Werkstätten hinbaut, sie muss an einem Weg liegen die Wege werden je grösser die Stadt wird ausgebaut</li> 
+                    <li>Manche Gebäude können nur an festen stellen gebaurt werden: Stollen, Gemeinschaftsprojekte</li>
+
+                </ul>
+            </li>
+        </ul>    
+        <ul>
+            <li>Lager
+                <ul>
+                    <li>Es werden Regale aufgestellt die für jedes Material einzeln bestückt werden können</li>
+                    <li>Jedes Regal hat eine gewisse Kapazität</li>
+                    <li>Die regale können aus unterschiedlichen Material sein und haben eine bestimmte Haltbarkeit</li>
+                    <li>Es dürfen so viele Regale aufgestellt weren wie benötigt werden</li>
+                    <li>die Raumgrösse passt sich an</li>
+                    <li>Ein Handwerker baut dieses Regal auf</li>
+                    <li>Es können dort verschieden Kisten und Kartons gelagert werden</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Geräteschuppen
+                <ul>
+                    <li>Hier kann man die Werkzeuge hinstellen, Hammer, Spitzhacke, Lampe</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Garagenplätze
+                <ul>
+                    <li>Hier stehen Karren, Loren, Wagen, Körbe</li>
+                    <li>Rollwagen, Schubkarre, Fahrrad, Handwagen, Hubfahrzeug</li>
+                    <li>ann beliebig erweitert werden</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Arbeitsbereich
+                <ul>
+                    <li>Hier können die Maschinen aufgestellt werden, sie sind alle per Hand bedienbar</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>Verkaufstresen
+                <ul>
+                    <li>Hier wird der Handel stattfinden</li>
+                </ul>
+            </li>
+        </ul>
+    <h2>2.6 Sichtbarkeit und Laden im Spiel</h2> 
+    <ul>
+        <li>Geböude sind von aussen sichtbar und können ausgebaut werden. Die Ausbauten können in der Welt gesehen werden</li>
+        <li>Der innenausbau der Häuser wird nur geladen wenn betreten wird, auch die Einzelnen Räume werden getrennht dazugeladen</li>
+        <li>spart Ressourcen, und Rechenleistng</li>
+    </ul>   
+
+    <h1>3. Besitzrechte</h1>
+    <ul>
+        <li>Instanz:
+            <ul>
+                <li>Eigentümer darf die Instanz wechseln</li>
+                <li>Auftragnehmer darf die Instanz wechseln</li>
+                <li>Es gibt 3 Instanzen#
+                    <ul>
+                        <li>öffentlich, privat und private Gruppe</li>
+                        <li>man muss das beim Wechsel zu wen man öffentlich privat oder zu jemand in der Gruppe will, der Spieler kann allerdings ablehen</li>
+                        <li>der Chat ist dann automatisch in der Gruppe</li>
+                        <li>chatgruppen weren farbig markiert</li>
+                    </ul>
+                </li>
+            </ul>
+
+        <li>Auftraggeber NPC - Voreinstellung
+            <ul>
+                <li>Der NPC ist für jeden sichtbar, darf angesprochen werden, Aufträge selbstverständlich angenommen werden, der kann auch draussen stehen</li>
+                <li>Der NPC braucht auch keine Wartung</li>
+                <li>nur der Besitzer kan den NPC um Hilfe fragen und weiter Skillen</li>
+            </ul>
+        </li>
+
+        <li>private Maschine und Werkzeug - Voreinstellung
+            <ul>
+                <li>Besizter -> sehen, benutzen, umbauen</li>
+                <li>Auftragnehmer -> sehen, benutzen, umbauen</li>
+                <li>alle -> sehen, nicht benutzen, nicht umbauen</li>
+                <li>unbekannter alleine -> nicht sehen, nicht benutzen, nicht umbauen</li>
+                <li>Helfer -> sehen, benutzen, nicht umbauen</li>
+                <li>Spieler xy -> nicht in der Liste ansonsten frei wählbar</li>
+                <li>wer in das haus rein darf darf die geräte auch umstellen dürfen sofern sie Tragbar sind also brauchem wir noch ein recht umstellen</li>
+            </ul>
+        </li>
+
+        <li>privates Gebäude - Voreinstellung
+            <ul>
+                <li>Besizter -> sehen, benutzen(betreten), umbauen</li>
+                <li>Auftragjnehmer -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>alle -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>unbekannter alleine -> sehen, nicht benutzen(betreten), nicht umbauen</li>
+                <li>Helfer -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>Spieler xy -> nicht in der Liste ansonsten frei wählbar</li>
+            </ul>
+        </li>            
+        <li>privater Raum - Voreinstellung
+            <ul>
+                <li>Besizter -> sehen, benutzen(betreten), umbauen</li>
+                <li>Auftragjnehmer -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>alle -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>unbekannter alleine -> sehen, nicht benutzen(betreten), nicht umbauen</li>
+                <li>Helfer -> sehen, benutzen(betreten), nicht umbauen</li>
+                <li>Spieler xy -> nicht in der Liste ansonsten frei wählbar</li>
+            </ul>
+        </li>            
+
+        <li>Ein Raum kan als öffentlich deklariert werden. dann gelten andere Regeln</li>
+    </ul>
+
+    <h1>4. Charaktäre</h1>
+    <ul>
+        <li>haben unterschiedliche Stärken und Schwächen</li>
+        <li>dürfen nicht ausgeschlossen werden</li>
+        <li>Jeder kann die Welt erleben.</li>
+        <li>Bestimmte Tiere sind effizienter oder können bestimmte Orte direkt erreichen.</li>
+        <li>Ein Hund kann ein Boot benutzen und zu einer Insel fahren.</li>
+        <li>Ein Fisch kann direkt darunter tauchen und eine Unterwasserhöhle erreichen.</li>
+        <li>Jeder Spieler wählt ein Tier.</li>
+        <li>Die Tierwahl beeinflusst:
+            <ul>
+                <li>Bewegungsmöglichkeiten</li>
+                <li>Fähigkeiten</li>
+                <li>Erreichbare Gebiete</li>
+                <li>Bevorzugte Berufe</li>
+            </ul>
+        </li>
+
+        <li>Die Tierwahl beeinflusst nicht:
+            <ul>
+                <li>Generelle Stärke</li>
+                <li>Wert des Spielers</li>
+            </ul>
+        </li>
+    
+
+
+    </ul>
+    <h2>4.1 Hund</h2>
+    <ul>
+        <li>
+            Bewegung
+            <ul>
+                <li>läuft</li>
+                <li>rennt</li>
+                <li>springt</li>
+                <li>spürt auf</li>
+                <li>sizten</li>
+                <li>pfote geben</li>
+                <li>schwanz einziehen</li>
+                <li>niedlich schaun</li>
+            </ul>
+            Stärken
+            <ul>
+                <li>Transport (gössere Mengen als andere)</li>
+                <li>Bewachen</li>
+                <li>Spurensuche</li>
+                <li>Gerüche erkennen</li>
+                <li>Ausdauer</li>
+                <li>Spürsinn</li>
+            </ul>
+            Schwächen
+            <ul>
+                <li>langsame Verareitung von Feinmechanik</li>
+            </ul>
+            Spezialisierung / Fähigkeiten
+            <ul>
+                <li>Föhrten lesen</li>
+                <li>verlorene Gegenstände finden</li>
+                <li>Lasten bewegen</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h2>4.2 Biene</h2>
+    <ul>
+        <li>
+            Bewegung
+            <ul>
+                <li>fliegt</li>
+                <li>geht</li>
+            </ul>
+            Stärken
+            <ul>
+                <li>gut in untersuchen von Pflanzen / Pflanzenkunde ist die Stärke</li>
+                <li>kann durch kleine öffnungen</li>
+                <li>bestäubt Pflanzen</li>
+                <li>Orientierung</li>
+                <li>Kann hoch auf einem Baum</li>
+            </ul>
+            Schwächen
+            <ul>
+                <li>Transport großer Mengen</li>
+                <li>Schwere Arbeiten</li>
+            </ul>
+            Spezialisierung / Fähigkeiten
+            <ul>
+                <li>hohe Orte, Baumkronen</li>
+                <li>seltene Pflanzen finde</li>
+                <li>Honigprodution (Sammeln von Blütenstaub und Erstelung on Honig)</li>
+                <li>Felsspalten</li>
+                <li>Blüten auf Felsen</li>
+                <li>versteckte Nester</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>4.3 Katze</h2>
+    <ul>
+        <li>Bewegung
+            <ul>
+                <li>schleicht</li>
+                <li>läuft</li>
+                <li>kletternt</li>
+                <li>springt</li>
+            </ul>
+        </li>
+        <li>Stärken
+            <ul>
+                <li>Suche, Funde</li>
+                <li>Geschicklichkeit</li>
+                <li>Klettern, kan auf unebenen Wegen Berge was fiinden trabnsporieren</li>                        
+                <li>versteckte Gegenstände finden</li>
+                <li>Beweglichkeit</li>
+            </ul>
+        </li>
+        <li>Schwächen
+            <ul>
+                <li>Schwere Lasten</li>
+            </ul>
+        </li>
+        <li>
+            Spezialisierung / Fähigkeiten
+            <ul>
+                <li>enge Bereiche, Höhlen</li>
+                <li>Dächer</li>
+                <li>kleine Durchgänge</li>
+                <li>versteckte Orte, Räume</li>
+                <li>leise Bewegung</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>4.4 Fisch</h2>
+    <ul>
+        <li>Bewegung
+            <ul>
+                <li>schwimmt</li>
+                <li>taucht</li>
+                <li>springt</li>
+                <li>Strömung nutzen</li>
+            </ul>
+        </li>
+        <li>Stärken
+            <ul>
+                <li>UnterwasserRessourcen: Findet alles Was im wasser ist</li>
+                <li>Schwimmen: ist schnell im Wasser</li>
+                <li>Wasserpflanzen</li>
+                <li>am Land langsamer</li>                        
+            </ul>
+        </li>
+        <li>Schwächen
+            <ul>
+                <li>am Land langsamer</li>                        
+
+            </ul>
+        </li>
+        <li>Hilfsmittel
+            <ul>
+                <li>Braucht ein Landanzug (beinhaltet Wasser, kann sich damit an Land bewegen)</li>
+                <li>Anzug aus als Kugel oder mit Beinen</li>
+                <li>Fahrzeuge</li>
+            </ul>
+            
+        </li>
+    </ul>
+
+    <ul>
+        <h1>5. Die Idee</h1>
+        <li>>Der Spieler betritt die Welt und wählt ein Tier, das seinen charcter präsentiert</li>
+        <li>Er kann sich verschiede echt Videos ansehern wie sich die Spielfigur lenkt und sich verhält, so bekommt er einen eindruck und muss nicht lange lesen</li>
+        <li>Ihm werden im Video besonder Fähigkeiten und die besten Berufe dazu mit afgeführt, er erhält si als stichpunkte in seiner Log zum nachlesen</li>
+        <li>Nach der Auswahl werden kurr ein interaktives Tutorial der bewegunsabläufe durchbesprochen.</li>
+        <li>Zuerst kommt aber ein Einstiegsvideo das den Spieler in der Welt willkommen heist</li>
+        <li>Jeder Spieler erhält ein Kleines Haus mit einem Grundstück was zufällig in der Stadt plaziert ist. Das Haus gehöt dem Spieler. Die Position des Hauses bleibt. und gehört zu der Welt, die ständig wächst.</li>
+        <li>Ein Haus ist eine Instanz
+            <ul> 
+                <li>Grundstück, Hausmodell von aussen und innen, Türen, Fenster alles veränderbar</li>
+                <li>Beim betreten des Hauses wird also kurz die Welt des Hauses geladen, soll der Spieler nicht merken, das kann schon passieren wenn der Spieler in der nähe ist</li>
+
+            </ul>
+        </li>
+
+
+    </ul>
+
+    <ul>
+        <h1>6. Das eigene Grundstück mit Haus</h1>
+        <li>6.1 Der Vorraum
+            <ul>
+                <li>Das Haus hat ein Vorraum</li>
+                <li>2 Bäume stehen dort (ganz klein)</li>
+                <li>Auszeichnugen an der Wand (Beitrittt der Welt)</li>
+                <li>Später steht dor ein Hilfe NPC</li>
+            </ul>
+        </li> 
+        <li>Später gibt es ein Portalraum oder zumindest ein Portal das zum Portalraum führt</li>
+        <li>Ein Raum für Kleidung und kleine Gegenstände, das könnte auch der Lagerraum sein, welcher ausbaubar ist. Es sollte aber ken Arbeitsplatz darstellen, der muss noch gebaut werden. Kleine Arbeiten können drausen gemacht werden.</li>
+        <li>Ein Schlafraum</li>
+        <li>Ein Wohnzimmer</li>
+        <li>Eine Trür führt zum Arbeitsplatz als Portal</li>
+        <li>Eine Tür geht nach draussen mit schönen Umwelt Design, der Hinterhof</li>
+        <li>Eie Tür wo er rinkommt geht wieder in den Vorgarten zuück</li>
+        <li>Eine Tür zum Lager / Inventarlager, das</li>
+    </ul>
+    
+    
+    <ul>
+        <h1>7. Wirtschaftssystem</h1>
+        <li>lokale Märkte
+            <ul>
+                <li>Jedes Dorf und besitzt ein eigenen Marktplatz</li>
+                <li>die Marktplätze haben kein gemeinsmes Inventar</li>
+                <li>Spieler liefern die Waren an</li>
+                <li>Spieler holen die Ware ab</li>
+                <li>Händler transportieren die Waren und bringen sie zum Spieler</li>
+                <li>Jeder Marktplatz entwickeltseine eigene Wirtschaft</li>
+                <li>Händler verdienen ihr Geld durch den Transport, nicht durch die gewinnspanne</li>
+                <li>der Verkäufer legt den Preis fest, so entstehen gleiche Waren mit unterschiedlichen Preisen</li>
+                <li>Berechnung der Transportkosten festgelegt: Grundbetrag * Entferungspauschale * Menge * Transportwegschwirigkeit</li>
+                <li>der Käufer muss für die Kosten des Transport aufkommen, erteilt Aufträge die Ware zu holen</li>
+                <li>Die Aufträge kann man direkt am Haus des Kaufenden sehen, oder wenn irgendwas gebaut wird, an einer Miene oder woanders</li>
+                <li>Aufträge können auch Aufgeschlagen auf dem Markt stehen</li>
+                <li></li>
+                    Das Haus hat ein Vorraum</li>
+                <li>2 Bäume stehen dort (ganz klein)</li>
+                <li>Auszeichnugen an der Wand (Beitrittt der Welt)</li>
+                <li>Später steht dor ein Hilfe NPC</li>
+                <li>echte Wirtschaft wird erzugt, belohnt gleichzeitig Handel Produktion und Logistik</li>
+            </ul>
+        </li>
+        <li>Rohstoffmärkte
+            <ul>            
+                <li>Jungtiere</li>
+                <li>(Jungbäume)</li>
+                <li>Setzlinge</li>
+                <li>Getreide anbauen</li>
+                <li>Lehm abbauen</li>
+                <li>Ei</li>
+                <li>Holz ducrch Bäume </li>
+                <li>Sand</li>
+                <li>Stein</li>
+                <li>Samen</li>
+                <li>Erz (Kohle, Kupfer,Eisen)</li>
+                <li>Wasser</li>
+                <li>Rohöl</li>
+                <li> hier wäre ein unendlicher Vorrat vorhanden miteinem Festen Preis pro Stück</li>
+                <li>dadurch verlässliche Grundstoffversorgung</li>
+                <li>verhindert Engpässe, ist teurer als abbauen</li>
+            </ul>
+        </li>
+
+        <li>LizensenSchürfrechte und Co
+            <ul>
+                <li>Fische fangen</li>
+                <li>Wasser abschöpfen</li>
+                <li>Rohöl fördern</li>
+                <li>Baum fällen</li>
+                <li>Erz abbaue</li>
+                <li>Wasser abpumpen</li>
+                <li>Samen Pflanzen</li>
+                <li>Hier könnte man ein Vorrat an Lizensen holen, jeder Soff kostete dabei unterschiedlich.</li>
+                <li>Es gibt keinen Mengenrabatt</li>
+                
+            </ul>
+        </li>
+        <li>Verabeitungsstoffe die Entstehen können
+            <ul>
+                <h3>Gruppierungen</h3>
+                <li>Fahrzeuge - Bretter und Stahl oder Eisen und eingebaute Sitze</li>
+                <li>Kleidung - Stoff oder Leder oder Alu oder Stahl</li>
+                <li>Maschinen - Stahl oder Holz oder beides</li>
+                <li>Möbel - Bretter und optional Stoff oder Leder</li>
+                <li>Werkzeuge - Bretter und Stahl oder Eisen</li>
+                <h3>Einzelstoffe</h3>
+                <li>Auto gibt es nicht</li>
+                <li>Baum - Samen</li>
+                <li>Baumstamm - Baum</li>
+                <li>Beton - Steine und KaLk ?</li>
+                <li>Bett - Bretter und Stoff</li>
+                <li>Bretter - Baumstamm</li>
+                <li>Brot - Mehl</li>
+                <li>Fahrrad - Eisen oder Alu - Kuststoff</li>
+                <li>Felle - Tierhaltung</li>
+                <li>Felle - Tierjagd</li>
+                <li>Garn - Wolle</li>
+                <li>Getreide - Samen</li>
+                <li>Glas - Kohle und Sand</li>
+                <li>Haus - Ziegel - Lehm - Stein</li>
+                <li>Karren - Holz und Eisen</li>
+                <li>Kunststoff - Verarbeitetes Öl</li>
+                <li>Kutsche - Holz und Stahl und Glas</li>
+                <li>Leder - Felle</li>
+                <li>Lehm - Abbau </li>
+                <li>Lore - Holz und Eisen</li>
+                <li>Mehl - Getreide</li>
+                <li>Papier - Zellulose</li>
+                <li>Rohöl - Abbau</li>
+                <li>Rollwagen - Holz und Eisen</li>
+                <li>Schrank - Holz und optional Glas,Eisen, Messing</li>
+                <li>Sitze - Stahl und Stoff oder Leder</li>
+                <li>Stahl - Eisen und Kohle</li>
+                <li>Stoff - Garn - Wolle - Schaf oder Pflanze</li>
+                <li>Stuhl - Bretter und optional Stoff oder Leder</li>
+                <li>Tisch - Bretter und Glas oder Mamor</li>
+                <li>Verarbeitetes Öl - Rohöl</li>
+                <li>Wolle - Schaf</li>
+                <li>Wolle - Pflanze</li>
+                <li>Ziegel - Lehm</li>
+                <li>Zellulose - Baumrinde</li>
+
+            </ul>
+        </li>
+    </ul>   
+    <ul>
+        <h1>8. Allgemeine Prinzipien</h1>
+        <li>Geld verdient man durch Arbeit - nicht durch ausnutzen vn Preisunterschieden</li>
+        <li>Grinden ist nicht das Ziel des Spiels</li>
+        <li>Es wird viel Wert auf Gemeinschaftsprojekte gelegt, eine nette Community soll entstehen und spass statt Stress</li>
+        <li>Richtiges Geld wird nicht für Vorteile, sondern für das Design und Einfachheit, Temporäre Automationen verwendet</li>
+
+    </ul>
+
+    <ul>
+        <h1>9. Betriebe</h1>
+        <li>Bäckerei - Bäcker - Brot backen</li>
+        <li>Sägewerk - Stämme nach Bretter</li>
+        <li>Förtwitshaus - Bäume fällen durch Forstwirt, und neu Pflazen</li>
+        <li>Jagdrevier - Jäger - Tiere jagen</li>
+        <li>Bauernhof / Akkerland - Landwirt - Korn anpflanzen</li>
+        <li>Mühle - Mehl erstellen durch Korn - Müller</li>
+        <li>Tischlerei - Bauen von Gegenständen mit Bretter</li>
+        <li>Stahlwerk - Hüttenarbeiter erstellen aus Eisen Stahl</li>^
+        <li>Steinbruch - Baut Steine ab - Steinbrecher ?</li>
+        <li>Bäckerei - Bäcker - Brot backen</li>
+    </ul>
+
+    <h1>10. Erzvorkommen</h1>
+
+    <h2>10.1 Technische Angaben</h2>
+
+    <ul>
+        <li>Eine Mine kann vollständig erschöpft werden. Erschöpfte Minen können nach einer bestimmten Zeit an derselben oder an einer anderen Stelle wieder entstehen.</li>
+
+        <li>Eine Mine ist nicht sofort erschöpft. Mit zunehmendem Abbau nimmt die verfügbare Menge eines Vorkommens ab.</li>
+
+        <li>In einer Mine können während des Abbaus weitere Erzvorkommen entdeckt werden.</li>
+
+        <li>Das Erzvorkommen einer Mine wird beim Erstellen der Mine festgelegt. Dabei werden unter anderem folgende Eigenschaften gespeichert:
+            <ul>
+                <li>Position des Vorkommens innerhalb der Mine</li>
+                <li>Ausdehnung des Vorkommens in Länge, Breite und Höhe</li>
+                <li>Form des Vorkommens, beispielsweise kugel-, linsen- oder gangförmig</li>
+                <li>verfügbare Menge in Kilogramm</li>
+                <li>Art des Erzes</li>
+                <li>Qualität und Reinheit des Erzes</li>
+                <li>Wahrscheinlichkeit, mit der das Vorkommen entdeckt werden kann</li>
+                <li>Härte des umgebenden Gesteins</li>
+            </ul>
+        </li>
+
+        <li>In einer Mine können mehrere gleiche oder unterschiedliche Erzvorkommen vorhanden sein.</li>
+
+        <li>Unterschiedliche Vorkommen können direkt aneinander angrenzen oder sich überschneiden.</li>
+
+        <li>Ein Erzvorkommen kann aus einem einzelnen Bereich bestehen oder sich über mehrere Bereiche und Gänge erstrecken.</li>
+
+        <li>Die Wahrscheinlichkeit, ein Vorkommen zu entdecken, hängt unter anderem von folgenden Faktoren ab:
+            <ul>
+                <li>Werkzeug und Qualität des Werkzeugs</li>
+                <li>Bergbau-Skill des Spielers</li>
+                <li>Entfernung zum Vorkommen</li>
+                <li>Härte des umgebenden Gesteins</li>
+                <li>Art des verwendeten Werkzeugs</li>
+                <li>Größe des Vorkommens</li>
+                <li>Qualität der Untersuchung</li>
+                <li>Anzahl der beteiligten Spieler</li>
+            </ul>
+        </li>
+
+        <li>Gruppen können durch gemeinsames Suchen und unterschiedliche Fähigkeiten die Wahrscheinlichkeit erhöhen, ein Vorkommen zu entdecken.</li>
+
+        <li>Eine Mine kann unterschiedliche Gesteinshärten besitzen. Dadurch können bestimmte Bereiche wesentlich schwieriger abzubauen sein als andere.</li>
+
+        <li>In einem Schacht oder Tunnel gibt es keinen vorgegebenen Weg. Die Spieler entscheiden selbst, in welche Richtung sie graben und welche Bereiche sie untersuchen.</li>
+
+        <li>Die Spieler können sowohl nach besonders weichem Gestein als auch gezielt nach möglichen Erzvorkommen suchen.</li>
+
+        <li>Wird ein Vorkommen entdeckt, wird seine Position auf der Karte des Finders eingetragen.</li>
+
+        <li>Der Finder kann die Fundstelle auf seiner Karte markieren und diese Information mit anderen Spielern teilen.</li>
+
+        <li>Andere Spieler können bekannte Fundstellen und Erkenntnisse in ihre eigene Karte übernehmen.</li>
+
+        <li>Fundstellen können zusätzlich auf der großen Stadtkarte eingezeichnet werden, sofern sie für andere Spieler zugänglich gemacht werden.</li>
+
+        <li>Bohrstellen, Schächte und Tunnelsysteme werden ebenfalls auf den entsprechenden Karten sichtbar gemacht.</li>
+
+        <li>Eine magisch verzauberte Mine kann sich regenerieren. Beispielsweise kann sich die vorhandene Erzmenge täglich um 0,5 % erhöhen.</li>
+
+        <li>Die Regeneration kann abhängig von der Art und Stärke der magischen Verzauberung unterschiedlich ausfallen.</li>
+
+        <li>Es kann im Höhlen Beprechungsraum eine Karte aufgestellt werden die alle Spieler updaten können</li>
+
+        <li>Ein Spieler der ein Erz gefunden hat kann vileicht weniger Erz aus dem Gestein herausholen als en anderer, weil er ander Fähigkeiten und Maschinen hat. Das Gestein was über bleibt, kann weitergegeben und verarbeitet werden.</li>
+
+
+    </ul>
+
+    <h2>10.2 Erze und Vorkommen</h2>
+
+    <p>
+        Welche Erze in einer Mine gefunden werden können, hängt von der geologischen
+        Beschaffenheit des Gebietes ab. Verschiedene Gesteine und Bodenschichten
+        begünstigen unterschiedliche Erzvorkommen.
+    </p>
+
+    <h3>Gewöhnliche Metallerze</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Erz</th>
+                <th>Typisches Vorkommen</th>
+                <th>Verwendung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Eisenerz</td>
+                <td>Eisenhaltiges Gestein, Basalt, Schiefer, Bergmassive</td>
+                <td>Werkzeuge, Waffen, Rüstungen, Bauteile</td>
+            </tr>
+            <tr>
+                <td>Kupfererz</td>
+                <td>Vulkanisches Gestein, Sandstein, Schiefer</td>
+                <td>Werkzeuge, Kabel, Bronze, Legierungen</td>
+            </tr>
+            <tr>
+                <td>Zinnerz</td>
+                <td>Granit, vulkanisches Gestein</td>
+                <td>Zinn, Bronze, Legierungen</td>
+            </tr>
+            <tr>
+                <td>Bleierz</td>
+                <td>Kalkstein, Sandstein, hydrothermale Gesteine</td>
+                <td>Gewichte, Batterien, spezielle Handwerke</td>
+            </tr>
+            <tr>
+                <td>Zinkerz</td>
+                <td>Kalkstein, Dolomit, vulkanisches Gestein</td>
+                <td>Messing, Beschichtungen, Legierungen</td>
+            </tr>
+            <tr>
+                <td>Silbererz</td>
+                <td>Quarzadern, vulkanisches Gestein, Tiefengestein</td>
+                <td>Münzen, Schmuck, Waffen, Magie</td>
+            </tr>
+            <tr>
+                <td>Golderz</td>
+                <td>Quarzadern, Flussablagerungen, Tiefengestein</td>
+                <td>Münzen, Schmuck, Magie</td>
+            </tr>
+            <tr>
+                <td>Quecksilbererz</td>
+                <td>Vulkanische Gebiete, heiße Quellen</td>
+                <td>Alchemie, Magie</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Seltene und wertvolle Erze</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Erz</th>
+                <th>Typisches Vorkommen</th>
+                <th>Verwendung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Platin</td>
+                <td>Tiefengestein, alte Gebirgsmassive</td>
+                <td>Hochwertige Schmuckstücke, Werkzeuge, Magie</td>
+            </tr>
+            <tr>
+                <td>Mithril</td>
+                <td>Magische Tiefengesteine, alte Gebirge</td>
+                <td>Leichte Waffen, Rüstungen, magische Gegenstände</td>
+            </tr>
+            <tr>
+                <td>Adamantit</td>
+                <td>Sehr tiefes Gestein, tektonische Bruchzonen</td>
+                <td>Extrem harte Waffen und Rüstungen</td>
+            </tr>
+            <tr>
+                <td>Orichalkum</td>
+                <td>Vulkanische Tiefenschichten, magische Gesteinsadern</td>
+                <td>Hochwertige Waffen, Rüstungen, Artefakte</td>
+            </tr>
+            <tr>
+                <td>Magierit</td>
+                <td>Magisch belastete Gesteinsschichten</td>
+                <td>Zauberstäbe, Runen, magische Gegenstände</td>
+            </tr>
+            <tr>
+                <td>Arkanium</td>
+                <td>Starke magische Knotenpunkte tief unter der Erde</td>
+                <td>Hochstufige Magie und Artefakte</td>
+            </tr>
+            <tr>
+                <td>Dämonenstahl</td>
+                <td>Verfluchte Gesteinsschichten und alte Ruinen</td>
+                <td>Dunkle Waffen und Rüstungen</td>
+            </tr>
+            <tr>
+                <td>Himmelsmetall</td>
+                <td>Meteoritenkrater und unterirdische Einschlagstellen</td>
+                <td>Seltene Waffen und magische Artefakte</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Erze nach Boden- und Gesteinsbeschaffenheit</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Boden / Gestein</th>
+                <th>Mögliche Vorkommen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sand und Sandstein</td>
+                <td>Eisen, Kupfer, Blei, Gold</td>
+            </tr>
+            <tr>
+                <td>Kalkstein</td>
+                <td>Blei, Zink, Eisen, Silber</td>
+            </tr>
+            <tr>
+                <td>Granit</td>
+                <td>Zinn, Kupfer, Wolfram, Silber, seltene Erze</td>
+            </tr>
+            <tr>
+                <td>Schiefer</td>
+                <td>Eisen, Kupfer, Silber</td>
+            </tr>
+            <tr>
+                <td>Basalt</td>
+                <td>Eisen, Kupfer, seltene vulkanische Erze</td>
+            </tr>
+            <tr>
+                <td>Vulkanisches Gestein</td>
+                <td>Schwefel, Kupfer, Gold, Silber, Platin</td>
+            </tr>
+            <tr>
+                <td>Quarzadern</td>
+                <td>Gold, Silber, Kristalle, Edelsteine</td>
+            </tr>
+            <tr>
+                <td>Tiefengestein</td>
+                <td>Gold, Platin, Mithril, Adamantit</td>
+            </tr>
+            <tr>
+                <td>Magisches Gestein</td>
+                <td>Magierit, Arkanium, magische Kristalle</td>
+            </tr>
+            <tr>
+                <td>Verfluchtes Gestein</td>
+                <td>Dämonenstahl, Schwarzkristall, dunkle Erze</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>10.3 Edelsteine</h2>
+
+    <p>
+        Edelsteine können als eigenständige Vorkommen auftreten oder zusammen mit
+        bestimmten Erzen gefunden werden. Besonders häufig befinden sie sich in
+        Quarzadern, Hohlräumen, magmatischen Gesteinen und alten Gesteinsformationen.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Edelstein</th>
+                <th>Typisches Vorkommen</th>
+                <th>Kann zusammen mit</th>
+                <th>Verwendung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diamant</td>
+                <td>Sehr tiefes Gestein</td>
+                <td>Adamantit, Tiefengestein</td>
+                <td>Schmuck, Werkzeuge, Magie</td>
+            </tr>
+            <tr>
+                <td>Rubin</td>
+                <td>Vulkanisches Gestein</td>
+                <td>Kupfer, Eisen, Feuererde</td>
+                <td>Schmuck, Feuerzauber</td>
+            </tr>
+            <tr>
+                <td>Saphir</td>
+                <td>Magmatisches Gestein</td>
+                <td>Eisen, Silber</td>
+                <td>Schmuck, Wasser- und Eismagie</td>
+            </tr>
+            <tr>
+                <td>Smaragd</td>
+                <td>Metamorphes Gestein</td>
+                <td>Quarz, Kupfer, Eisen</td>
+                <td>Schmuck, Naturmagie</td>
+            </tr>
+            <tr>
+                <td>Amethyst</td>
+                <td>Quarzadern und Hohlräume</td>
+                <td>Silber, Gold</td>
+                <td>Schmuck, Magie</td>
+            </tr>
+            <tr>
+                <td>Granat</td>
+                <td>Metamorphes Gestein</td>
+                <td>Eisen, Silber</td>
+                <td>Schmuck, Magie</td>
+            </tr>
+            <tr>
+                <td>Opal</td>
+                <td>Vulkanische und wasserführende Gesteine</td>
+                <td>Silber, Quarz</td>
+                <td>Schmuck, Illusionsmagie</td>
+            </tr>
+            <tr>
+                <td>Topas</td>
+                <td>Granit und vulkanisches Gestein</td>
+                <td>Zinn, Kupfer</td>
+                <td>Schmuck, Magie</td>
+            </tr>
+            <tr>
+                <td>Onyx</td>
+                <td>Kalkstein und Höhlensysteme</td>
+                <td>Gold, Silber</td>
+                <td>Schmuck, Runen</td>
+            </tr>
+            <tr>
+                <td>Türkis</td>
+                <td>Trockene, kupferhaltige Gesteine</td>
+                <td>Kupfer</td>
+                <td>Schmuck, Schutzmagie</td>
+            </tr>
+            <tr>
+                <td>Magischer Kristall</td>
+                <td>Magische Gesteinsadern</td>
+                <td>Magierit, Arkanium</td>
+                <td>Magie, Artefakte</td>
+            </tr>
+            <tr>
+                <td>Schwarzkristall</td>
+                <td>Verfluchte Gesteine</td>
+                <td>Dämonenstahl</td>
+                <td>Dunkle Magie</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>10.4 Artefakte</h2>
+
+    <p>
+        Bei der Erkundung und dem Abbau von Minen können neben Erzen und Edelsteinen
+        auch alte Gegenstände entdeckt werden. Die Wahrscheinlichkeit hierfür kann
+        von der Tiefe, dem Alter der Mine, der Umgebung und dem Bergbau-Skill
+        abhängen.
+    </p>
+
+    <h3>Artefakte für Bergleute</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Artefakt</th>
+                <th>Fundort</th>
+                <th>Wirkung / Verwendung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alter Bergmannskompass</td>
+                <td>Verlassene Stollen</td>
+                <td>Erhöht die Wahrscheinlichkeit, Erzvorkommen zu entdecken.</td>
+            </tr>
+            <tr>
+                <td>Kristalllaterne</td>
+                <td>Tiefe Höhlen</td>
+                <td>Beleuchtet verborgene Hohlräume und magische Adern.</td>
+            </tr>
+            <tr>
+                <td>Grubenhelm des Meisters</td>
+                <td>Alte Bergwerke</td>
+                <td>Erhöht die Wahrnehmung bei der Erkundung von Minen.</td>
+            </tr>
+            <tr>
+                <td>Sucherpickel</td>
+                <td>Alte Bergbausiedlungen</td>
+                <td>Kann versteckte Erzadern leichter aufspüren.</td>
+            </tr>
+            <tr>
+                <td>Steintafel des Bergkönigs</td>
+                <td>Sehr alte Minen</td>
+                <td>Enthält Hinweise auf besonders seltene Vorkommen.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Artefakte für Schmiede</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Artefakt</th>
+                <th>Fundort</th>
+                <th>Wirkung / Verwendung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hammer des ersten Schmieds</td>
+                <td>Verlassene Schmiede unter der Erde</td>
+                <td>Erhöht die Qualität hergestellter Waffen und Werkzeuge.</td>
+            </tr>
+            <tr>
+                <td>Glutstein</td>
+                <td>Vulkanische Höhlen</td>
+                <td>Erzeugt dauerhaft hohe Temperaturen beim Schmieden.</td>
+            </tr>
+            <tr>
+                <td>Amboss der Alten</td>
+                <td>Vergessene Zwergen- oder Königsschmiede</td>
+                <td>Ermöglicht die Verarbeitung besonders harter Metalle.</td>
+            </tr>
+            <tr>
+                <td>Runenhammer</td>
+                <td>Magische Schmieden</td>
+                <td>Kann beim Schmieden magische Eigenschaften in Gegenstände einbringen.</td>
+            </tr>
+            <tr>
+                <td>Schmelztiegel des Drachen</td>
+                <td>Alte Drachenhöhlen</td>
+                <td>Kann außergewöhnlich hitzebeständige Metalle verarbeiten.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Seltene Artefakte</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Artefakt</th>
+                <th>Möglicher Fundort</th>
+                <th>Besonderheit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Herz des Berges</td>
+                <td>Tiefster Bereich einer uralten Mine</td>
+                <td>Erhöht die Regeneration von Erzvorkommen.</td>
+            </tr>
+            <tr>
+                <td>Hammer des Bergkönigs</td>
+                <td>Verborgene Königsschmiede</td>
+                <td>Kann legendäre Metalle verarbeiten.</td>
+            </tr>
+            <tr>
+                <td>Kristall des Suchers</td>
+                <td>Magische Kristallhöhlen</td>
+                <td>Zeigt die Richtung zu einem seltenen Vorkommen an.</td>
+            </tr>
+            <tr>
+                <td>Runentafel der Erzmeister</td>
+                <td>Vergessene Bergbaustadt</td>
+                <td>Enthält Wissen über seltene Erze und deren Verarbeitung.</td>
+            </tr>
+            <tr>
+                <td>Schmiedeherz</td>
+                <td>Uralte magische Schmiede</td>
+                <td>Verbindet Schmiedekunst mit Magie und ermöglicht besondere Legierungen.</td>
+            </tr>
+        </tbody>
+    </table>
+        
+    <h2>10.5 Unterwassermiene</h2>
+    <ul>
+        <li>kann Landspieler nicht so leicht erreichen</li>
+        <li>Wassertier aller art können es</li>
+        <li>Spezialvorkommen im Wasser                
+            <ul>
+                <li>Perlen</li>
+                <li>Muscheln</li>
+                <li>Unterwasser Erz (aus super rein)</li>
+                <li>Seltene Kristalle</li>
+                <li>besondere Pflanzen</li>
+                <li>Wasserrohstoffe</li>
+            </ul>
+        </li>
+        <li>Wassertier ermöglicht den Transport oder sammelt selber</li>
+        <li>Es kann ein Förderband zum Land für eine Abnahme der Waren geschaffen werden</li>
+        <li>Lagerbereiche für An und abtransport für Wasser schaffen</li>
+    </ul>
+        
+        <h2>10.6 Luftbereiche</h2>
+        <ul>
+            <li>kann Landspieler nicht so leicht erreichen</li>
+            <li>Flugtiere aller art können es</li>
+            <li>Spezialvorkommen in der Höhe                 
+                <ul>
+                    <li>Baumwolle</li>
+                    <li>seltene Pollen</li>
+                    <li>besondere Samen</li>
+                    <li>Honigsorten für Bienen</li>
+                    <li>Pflanzenextrakte</li>
+                </ul>
+            </li>
+            <li>Bereiche
+                <ul>
+                    <li>Felsspalten</li>
+                    <li>Baumkronen</li>
+                    <li>Blüten</li>
+                    <li>Nester</li>
+                </ul>
+            </li>
+            <li>Wassertier ermöglicht den Transport oder sammelt selber</li>
+            <li>Es kann ein Förderband zum Land für eine Abnahme der Waren geschaffen werden</li>
+            <li>Lagerbereiche für An und abtransport für Wasser schaffen</li>
+        </ul>
+
+    <h1>11 Gegenstände</h1>
+    <ul>
+        <li>können Runensockel haben</li>
+        <li>können Juwelensockel haben</li>
+        <li>können negative Werte oder Positive Werte haben</li>
+        <li>können Verzaubert werden</li>
+        <li>Arten von Gegenstände
+            <ul>
+                <li>Gebäude / Stollen</li>
+                <li>Maschinen / Fahrzeuge</li>
+                <li>Kleidung</li>
+                <li>Sockelsteine</li>
+                <li>Runensteine</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>11.1 Ringe</h2>
+    <ul>
+        <li>Ring: 10% Sammelgeschwindigkeit, 5% Glück, -5% Tragkraft</li>
+        <li>Ring der Erde: 2 Sockel für Runen oder Edelsteine</li></ul>
+        <li></li>
+    </ul>
+    <h2>11.2 Hose</h2>
+    <ul>
+        <li>Hose: 20 Ausdauer, -5% Bewegungsgeschwindigkeit</li>
+        <li></li>
+    </ul>
+    <h2>11.3 Werkzeug im Allgemeinen</h2>
+    <ul>
+        <li>Hose: 20 Ausdauer, -5% Bewegungsgeschwindigkeit</li>
+        <li></li>
+    </ul>
+    <h2>11.4 Kleidung im Allgemeinen</h2>
+    <ul>
+        <li>Hose: 20 Ausdauer, -5% Bewegungsgeschwindigkeit</li>
+        <li></li>
+    </ul>
+
+    <h2>11.5 Werkzeugslots</h2>
+    <ul>
+        <li>Bestimmte Werkzeuge können in extra Werkzeugslots eingesetzt werden</li>
+        <li>die Anzahl kann je nach Ausbaustufe, Skill variieren, Standart sind 1 Werkzeug, 2 kann leicht erreicht werden </li>
+    </ul>
+
+    <h2>11.6 Werkzeuge Ideen</h2>
+    <ul>
+        <li>Eine Radarkarte, die oben links oder rechst am Bildschirm angezeigt wird um Erzvorkommen anzuzeigen, Sobald der Spieler sein Suchwerkzeug aktiviert kann man das ergebnis in der Radarkarte sehen</li>
+    </ul>
+    
+
+    <h1>12 Boni oder Nachteile</h1>
+    <ul>
+        <li>% Sammelgeschwindigkeit</li>
+        <li>% Glück</li>
+        <li>% Tragkraft</li>
+        <li>% grösserer Schritt</li>
+        <li>% Laufgeschwindigkeit</li>
+        <li>% Gehgeschwindigkeit</li>
+        <li>% leiser</li>
+        <li>% Kraft</li>
+        <li>x Mana</li>
+        <li>% manareggeneration</li>
+        <li>x Leben</li>
+        <li>% Lebensgeneration</li>
+        <li>% Bewegungsgeschwindigkeit</li>
+        <li>% besser Finden / Spezialisierung</li>
+        <li>% Resistenz / Spezialisierung wie Feuer</li>
+        <li>% Energie</li>
+        <li>% Ausdauer</li>
+        <li>% Produktionsgeschwindigkeit</li>
+        <li>% Produktionsmenge</li>
+        <li>% Abbaugeschwindigkeit</li>
+        <li>% Qualität</li>
+        <li>schnelleres Wachstum</li>
+        <li>bessere Produktion</li>
+        <li>bessere Transporte</li>
+        <li>höhere Qualität</li>
+        <li>SetBoni: 2 Teile = 5% Abbaugeschwindigkkeit</li>
+        <li>SetBoni: 4 Teile = 10% Erzfund-Chance</li>
+    </ul>
+    <h2>12.1 SetBoni Arten</h1>
+    <ul>        
+        <li>Für Runen</li>
+        <li>Für Edelsteine</li>
+        <li>Für Kleidung</li>
+    </ul>
+    <h2>12.2 SetBoni Beispiele</h1>
+    <ul>        
+        <li>Bergarbeiter Set
+            <ul>
+                <li>2 Teile : +5% Abbaugeschwindigkeit</li>
+                <li>4 Teile: +10% Erzfund-Chance</li>
+            </ul> 
+        </li>
+        <li>Für Edelsteine</li>
+        <li>Für Kleidung</li>
+    </ul>
+
+
+    <h1>13 Edesteine für Sockel Systeme</h1>
+    <ul>
+        <li>Rubin(Rot): Feuerresistenz und Kraft</li>
+        <li>Opal(Schwarz):</li>
+        <li>Saphier(Blau):</li>
+        <li>Diamand (Weiss):</li>
+        <li>Smaragd(Grün):</li>
+
+    </ul>
+    <h1>14 Runen für Sockelsysteme</h1>
+    <ul>
+        <li>Rune der Arbeit: Produktionsgeschwindigkeit, -10 % Energie</li>
+        <li>Opal(Schwarz):</li>
+        <li>Saphier(Blau):</li>
+        <li>Diamand (Weiss):</li>
+        <li>Smaragd(Grün):</li>
+
+    </ul>
+
+    <h1>15 Dorf- und Stadtprojekte</h1>
+    <ul>
+        <li>Besondere Gebäude</li>
+        <li>Denkmäler</li>
+        <li>Statuen</li>
+        <br>
+        <li>Denkmal des Handwerks</li>
+        <li>Baum des Lebens +10% Pflanzenwachstum für 7 Tage</li>
+        <li>Schmidestatue +10% Verarbeitungsgeschwindigkeit für 7 Tage</li>
+        <li>Handelsdenkmal +15% Transportlohn für 7 Tage</li>
+    </ul>
+
+    <h2>Denkmal des Handwerks</h2>
+    <ul>
+        <li>5000 Stein: </li>
+        <li>3000 Stah:</li>
+        <li>1000 Gold:</li>
+        <li>muss zum Punkt transportiert werden:</li>
+        <li>muss verarbeitet weren</li>
+        <li>ergibt ein Bonus von 10% Qualität für alle Handwerker</li>
+        <li>ergibt eine Schöne Statue de in der Stadt bleibt</li>
+    </ul>
+    <h1>16 Einfache Böden und Erden</h1>
+    <ul>
+        <li>Hier eine übersicht und weitere Beispiele</li>
+
+        <li>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rohstoff</th>
+                        <th>Verwendung</th>
+                        <th>Möglicher Beruf</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lehm</td>
+                        <td>Ziegel, Keramik, Töpfe</td>
+                        <td>Lehmstecher</td>
+                    </tr>
+                    <tr>
+                        <td>Ton</td>
+                        <td>Keramik, Porzellan, Figuren</td>
+                        <td>Tonstecher</td>
+                    </tr>
+                    <tr>
+                        <td>Torf</td>
+                        <td>Brennstoff, Dünger</td>
+                        <td>Torfstecher</td>
+                    </tr>
+                    <tr>
+                        <td>Humus</td>
+                        <td>Landwirtschaft, Gartenbau</td>
+                        <td>Bodenarbeiter</td>
+                    </tr>
+                    <tr>
+                        <td>Muttererde</td>
+                        <td>Felder, Pflanzen</td>
+                        <td>Erdner / Bodenarbeiter</td>
+                    </tr>
+                    <tr>
+                        <td>Sand</td>
+                        <td>Glas, Mörtel, Bau</td>
+                        <td>Sandgräber</td>
+                    </tr>
+                    <tr>
+                        <td>Kies</td>
+                        <td>Straßen, Beton, Bau</td>
+                        <td>Kiesgräber</td>
+                    </tr>
+                    <tr>
+                        <td>Schluff</td>
+                        <td>Landwirtschaft, Ziegel</td>
+                        <td>Schluffgräber</td>
+                    </tr>
+                    <tr>
+                        <td>Kalkerde</td>
+                        <td>Mörtel, Dünger</td>
+                        <td>Kalkbrenner</td>
+                    </tr>
+                    <tr>
+                        <td>Mergel</td>
+                        <td>Dünger, Bau</td>
+                        <td>Mergelstecher</td>
+                    </tr>
+                    <tr>
+                        <td>Salzerde</td>
+                        <td>Salzgewinnung</td>
+                        <td>Salzsieder</td>
+                    </tr>
+                    <tr>
+                        <td>Ascheerde</td>
+                        <td>Dünger, Alchemie</td>
+                        <td>Aschesammler</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+    </ul>   
+    <h1>17 Magische Erden</h1>
+    <ul>
+        <li><strong>Feuererde</strong> - für Schmiede, Magie und Feuerzauber</li>
+        <li><strong>Erdwurzel</strong> - besonders fruchtbare Erde für seltene Pflanzen</li>
+        <li><strong>Monderde</strong> - wird für Alchemie und Magie benötigt</li>
+        <li><strong>Kristallerde</strong> - enthält winzige Kristalle</li>
+        <li><strong>Schwarzerde</strong> - extrem fruchtbar, aber möglicherweise verflucht</li>
+        <li><strong>Graberde</strong> - für Nekromantie</li>
+        <li><strong>Feenstauberde</strong> - lässt Pflanzen ungewöhnlich schnell wachsen</li>
+        <li><strong>Drachenerde</strong> - durch Drachenfeuer veränderte Erde</li>
+        <li><strong>Sternenerde</strong> - seltenes Material, das nach Meteoriteneinschlägen gefunden wird</li>
+    </ul>    
+
+    <h1>18 Lizenzen Beispiele</h1>
+    <ul>
+        <li>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Schürfrecht</th>
+                        <th>Menge</th>
+                        <th>Preis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Erzabbau</td>
+                        <td>100 kg</td>
+                        <td>10 Münzen</td>
+                    </tr>
+                    <tr>
+                        <td>Erzabbau</td>
+                        <td>1.000 kg</td>
+                        <td>100 Münzen</td>
+                    </tr>
+                    <tr>
+                        <td>Erzabbau</td>
+                        <td>10.000 kg</td>
+                        <td>1.000 Münzen</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </li>
+    </ul>
+
+    <h1>19. Ressourcen</h1>
+    <h2>19.1 Allgemein</h2>
+
+    <h2>19.6 Spezialbereich - Luft und Samen</h2>
+    <ul>
+        <li>Was
+            <ul>
+                <li>seltene Pollen</li>
+                <li>besondere Samen</li>
+                <li>Honigsorten</li>
+                <li>versteckte Nester</li>
+                <li>guter Nektar für Tränke</li>
+            </ul>
+        </li>
+        <li>Wo
+            <ul>
+                <li>hohe Baumkronen</li>
+                <li>kleine Felsspalten</li>
+                <li>Blüten auf hohen Felsen</li>
+                <li>versteckte Nester</li>
+            </ul>            
+        </li>
+        <li>Wer
+            <ul>
+                <li>Biene</li>
+                <li>Hummel</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>19.7 Spezialbereich - Kleine Ecken</h2>
+    <ul>
+        <li>Was
+            <ul>
+                <li>seltene Fundstücke</li>
+                <li>kleine Gegenstände</li>
+                <li>geheime Wege</li>
+            </ul>
+        </li>
+        <li>Wo
+            <ul>
+                <li>enge Höhlen</li>
+                <li>Dächer</li>
+                <li>kleine Durchgänge</li>
+                <li>versteckte Räume</li>
+            </ul>            
+        </li>
+        <li>Wer
+            <ul>
+                <li>Biene</li>
+                <li>Katze</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>19.8 Spezialbereich - Wasser</h2>
+    <ul>
+        <li>Was
+            <ul>
+                <li>Unterwasser Erz</li>
+                <li>seltene Kristalle</li>
+                <li>besondere Pflanzen</li>
+                <li>Perlen</li>
+                <li>Muscheln</li>
+                <li>Wasserrohstoffe</li>
+            </ul>
+        </li>
+        <li>Wo
+            <ul>
+                <li>tief im Wasser</li>
+                <li>Wasserminen</li>
+                <li>Wassergräben</li>
+                <li>Felsspalten unter Wasser</li>
+            </ul>            
+        </li>
+        <li>Wer
+            <ul>
+                <li>Fisch</li>
+                <li>Delfin</li>
+                <li>Hai</li>
+                <li>Seepferd, Seestern</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>19.9 Spezialbereich - Boden</h2>
+    <ul>
+        <li>Was
+            <ul>
+                <li>versteckte Lager</li>
+                <li>verlorene Gegenstände</li>
+                <li>besondere Fundstellen</li>
+            </ul>
+        </li>
+        <li>Wo
+            <ul>
+                <li>Waldgebiete</li>
+                <li>Fährtengebiete</li>
+                <li>Rettungsmissionen</li>
+            </ul>            
+        </li>
+        <li>Wer
+            <ul>
+                <li>Hund</li>
+                <li>Delfin</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>20. Beispiele für zusammenarbeit</h1>
+    <h2>20.1 Tiere und Fähigkeiten</h2>
+    <ul>
+        <li>Katze:<br> findet Eingang durch engen Spalt</li>
+        <li>Hund:<br>findet verstecktes Lager durch Geruch</li>
+        <li>Fisch:<br>holt Unterwasser-Erz</li>
+        <li>Biene:<br>bestäubt seltene Pflanzen</li>
+    </ul>
+
+    <h1>21. Projekte die gebaut werden können und wie</h1>
+    <h2>21.1 Unterwasserkraftwerk</h2>
+    <ul>
+        <li>Aufgaben:
+            <ul>
+                <li>Fisch-Spieler für Unterwasserteile</li>
+                <li>Biene für spezielle Pflanzenharze</li>
+                <li>Hund für Transporte</li>
+                <li>Katze für Montage an schwierigen Stellen</li>
+            </ul>
+        </li>
+
+        <li>Ressourcen:</li>
+        <li>Katze:<br> findet Eingang durch engen Spalt</li>
+        <li>Hund:<br>findet verstecktes Lager durch Geruch</li>
+        <li>Fisch:<br>holt Unterwasser-Erz</li>
+        <li>Biene:<br>bestäubt seltene Pflanzen</li>
+    </ul>
+
+
+
+    <h1>22. Charakter: Tiere Gruppierungen</h1>
+    <h2>22.1🐟 <strong>Wassertiere</strong></h2>
+    <ul>
+        <li>Zugang zu Unterwassergebieten</li>
+        <li>Unterwasser-Ressourcen</li>
+        <li>Spezielle Fundorte</li>
+        <li>Können Wasseranzug / Wasserblase benutzen</li>
+    </ul>  
+
+    <h2>22.2 🐝 <strong>Flugtiere</strong></h2> 
+    <ul>
+        <li>Erreichen hohe oder schwer zugängliche Orte</li>
+        <li>Besondere Pflanzen und Ressourcen</li>
+    </ul>
+    
+    <h2>22.3 🐈 <strong>Geschickliche Tiere</strong></h2>
+    <ul>
+        <li>Enge Wege</li>
+        <li>Klettern</li>
+        <li>Versteckte Bereiche</li>
+    </ul>
+
+    <h2>22.4 🐕 <strong>Bodentiere</strong></h2>            
+    <ul>
+        <li>Spuren suchen</li>
+        <li>Transport unterstützen</li>
+        <li>Besondere Bodenressourcen</li>
+    </ul>
+
+    <h1>23. Ziel</h1>
+
+    <p>
+        Eine lebendige 3D-Mehrspielerwelt, in der Spieler als unterschiedliche
+        Tiere leben, arbeiten, handeln und gemeinsam die Welt entwickeln.
+    </p>
+
+    <p>Der Schwerpunkt liegt auf:</p>
+
+    <ul>
+        <li>Zusammenarbeit</li>
+        <li>Wirtschaft</li>
+        <li>Erkundung</li>
+        <li>Produktion</li>
+        <li>Individualisierung</li>
+        <li>Langfristigem Aufbau</li>
+    </ul>
+
+    <p>
+        Es gibt keinen klassischen „stärksten Charakter“.
+    </p>
+
+    <p>
+        Jede Tierart besitzt eigene Fähigkeiten und Aufgaben.
+    </p>
+
+
+    <h1>24. Welt und Spielprinzip</h1>
+
+    <p>Die Welt besteht aus:</p>
+
+    <ul>
+        <li>Dörfern</li>
+        <li>Städten</li>
+        <li>Naturgebieten</li>
+        <li>Produktionsstätten</li>
+        <li>Rohstoffgebieten</li>
+        <li>Spielergrundstücken</li>
+    </ul>
+
+    <p>
+        Die Welt entwickelt sich durch die Aktionen der Spieler.
+    </p>
+
+    <p>Beispiele:</p>
+
+    <ul>
+        <li>Neue Gebäude entstehen</li>
+        <li>Denkmäler werden gebaut</li>
+        <li>Handelswege entstehen</li>
+        <li>Neue Produktionsketten werden aufgebaut</li>
+    </ul>
+
+    <p>Die Welt wird folgndermasen aufgebaut:</p>
+
+    <ul>
+        <li>Dörfer und andere Gebiete werden zufällig aufgebaut, ein Dorf kann auch ein Waldstück haben oder ein Rohstofvorkommen beinhalten</li>
+        <li>Die Häuser die neu kommen wede zufällig innerhalb der Stadtgrenzen aufgestellt, bei jedem Hausbau wird die Stadtgrenze etwas göseer im Radius</li>
+        <li>Erreicht die Stadtgrenze eine ander Stadt mus sie sich in eine ander Richtung Ausdehnen</li>
+        <li>Die Städte sollten bei Neuerschaffung genug Neue leute beheimaten und einen schönen einstig zum Aufbau ermöglichen</li>
+        <li>Dörfer um das neue Dorf sollen Inforiert werden. Das kann mit einem Schönen Umzug mit vielen Wagen passieren</li>
+        <li>Erzvorkommen sollten nach Möglichkeit nicht im Dorf neu erscheinen</li>
+        <li>Die Stadtgrenze dehnt sich nicht nur bei Wohnhäusern aus , sondern nach jedem erstellten Gebäude</li>
+        <li>Flüsen können durch die Städte laufen</li>
+        <li>Waldgebiete sollten gross genug werden</li>
+        <li>Es soll ein angemessener Mix an Naturerscheinungen erstellt werden, Berge, Felsen, Wasser, Wasserfälle</li>
+        <li>Bei jeder Ausweitung der Stadt wird nahtürlich auch die Karte grösser.</li>
+        <li>Bei Erkundungen erweitert sich die Karte ebenfalls und bleibt bestehen, der Spieler kommt nie am Ende der Karte an</li>
+        <li>Ende der Karte könnt höchstens Berge oder ein Meer Sein das er nicht überqueren kann</li>
+        <li>zufuss würde er einfach irgendwann zu schwach werden und ertrinken.</li>
+        <li>Bei Einem Boot gehen irgendwann die Ressourcen aus, es sei denn man kann sich versorgen. Dann Könnte der Spieler immer Weiter kommen.</li>
+    </ul>
+
+    <p>Wie sehen die Bereiche aus:</p>
+
+
+    <ul>
+        <li>Stadtgebiet: Häuser, Märkte, Werkstättem, Denkmähler, Offizielle Hallen</li>
+        <li>Wald: Holz, Pflanzen, Tiere</li>
+        <li>Berge: Erz, Steine, seltene Materialien</li>
+        <li>Wasser: Fische, Unterwassergebiete, spezielle Rohstoffe</li>
+        <li>Höhlen: seltene Ressourcen, Abenteuer</li>
+    </ul>
+
+    <h1>25. Fahrzeuge</h1>
+    <ul>
+        <li>Wasserblase
+            <ul>
+                <li>Damit Fische sich an Land bewegen können</li>
+                <li>Fisch bleibt sichtbar</li>
+                <li>kann laufen/rollen</li>
+                <li>benötigt Wasserpflege</li>
+                <li>kann nicht so schnell sein wie Landtiere</li>
+                <li>kleine Landwege</li>
+                <li>kurze Zeit ausserhalb Wasser</li>
+                <li>passt zur Welt</li>
+                <li>Fisch bleibt Fisch</li>
+                <li>benötigt Wasserpflege</li>
+                <li>keine Identitätsänderung</li>
+                <li>Meinung: Fische können mit der Fischblase in jedem Fahrzeug einsteigen</li>
+            </ul>
+        </li>
+
+        <li>Wasserfahrzeug - für Schnelle bewegungen auf dem Wasser
+            <ul>
+                <li>Flüsse</li>
+                <li>Seen</li>
+                <li>Meer</li>
+            </ul>
+        </li>
+        <li>Landfahrzeug - für Schnelle bewegungen an Land
+            <ul>
+                <li>Berge</li>
+                <li>Brücken</li>
+                <li>Sand</li>
+            </ul>
+        </li>
+
+        <li>Arbeitsroboter für Wasser oder Land - für arbeiten^, verbessern die Arbeit
+            <ul>
+                <li>Gebäude</li>
+                <li>Werkstätten</li>
+                <li>Handel</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1>26. Echtes Geld</h1>
+    <ul>
+        <li>Spieler dürfen jeden Tag eine zeitlang spielen und können sich dann zwar bewegen, aber nicht mehr bei Gruppenaktionen mithelfen, nur ansehen</li>
+        <li>Beitrag
+            <table>
+                <tr><th></th><th>Einsteiger</th><th>Medium</th><th>Vollversion</th></tr>
+                <tr><th>Preis:Monatliche Zahlung</th><td>0€</td><td>5€</td><td>10€</td></tr>
+                <tr><th>Preis:Jährliche Zahlung</th><td>0€</td><td>50€</td><td>100€</td></tr>
+                <tr><th>Nutzungsdauer pro Tag</th><td>30 Minuten</td><td>2 Stunden</td><td>24 Stunden</td></tr>            
+            
+            </table>
+        </li>
+        <li>Nutzungsrechte könnnen per Echtgeld gekauft werden, dazu kann man ein Spielgeldkont aufladen (in Game Kauf)</li>
+
+    </ul>
+
+    <h1>27. Sockelplätze</h1>
+    <ul>
+        <li>Runensockel: hier Standart Rechteckig, besodere Formen Stern oder andere Formen, nur eine Farbe</li>
+        <li>Edelsteisockel: hier standart Rund Farblos für alle , bestimmte Farbe je für Edelsteinart, besondere Formen auch hier erlaubt</li>
+
+        <li>Sockelformen für bestimmte Runen</li>
+        <li>Sockelfarben für bestimmte Edelsteine</li>
+
+        <li>besondere Sockelformen: Katze, Baum oder andere möglich</li>
+    </ul>
+
+
+        
+
+    <h1>50. Spieldesign</h1>
+    <ul>50.1 Runtime
+        <li>Grundsprache: Javascript, HTML5</li>
+        <li>Grafic: WEBGL</li>        
+    </ul>
+    <ul>50.2 Software Tools
+        <li>Three.js 
+            <ul>
+                <li>Beliebt und Stabil</li>
+                <li>einfach zu lernen</li>
+                <li>riegige Community</li>
+                <li>viele Beispiele</li>
+            </ul>
+            <ul>
+                <li>im ProjektOrdner: npm create vite@latest</li>
+                <li>Projektname: homeworld</li>
+                <li>Framework: Vanilla</li>
+                <li>Sprache: Javascript</li>
+                <li>cd homeworld</li>
+                <li>npm install</li>
+                <li>npm install three</li>
+                <li>npm run dev</li>
+            </ul>
+        </li>
+        <li>Babylon.js 
+            <ul>
+                <li>Viele Funktionen bereits fertig</li>
+                <li>Physik</li>
+                <li>Animation</li>
+                <li>GUI</li>
+                <li>Partikeleffekte</li>
+                <li>Multiplyer nachrüstbar</li>
+            </ul>
+        </li>
+        <li>Blender 
+            <ul>
+                <li>https://www.blender.org</li>
+                <li>gITF erzeugen und ins spiel laden</li>
+            </ul>
+        </li>
+
+        <li>Visual Studio Code zum Programmieren</li>
+        <li>Erweiterungen:
+            <ul>
+                <li>ESLint</li>
+                <li>Prettier</li>
+                <li>LiveServer</li>
+                <li>ErrorLens</li>
+            </ul>
+        </li>
+        <li>node.js
+            <ul>
+                <li>https://nodejs.org</li>
+                <li>LTS</li>
+            </ul>
+        </li>
+        <li>GIT
+            <ul>
+                <li>https://git-scm.com</li>
+                <li>LTS</li>
+            </ul>
+        </li>
+
+    </ul>
+    <ul>50.3 Dateistruktur Projekt       
+        <li>src/</li>
+        <li>assets/</li>
+        <li>engine/ oder everhome/</li>
+        <li>models/</li>
+        <li>animals/</li>
+        <li>house/</li>
+        <li>nature/</li>
+        <li>textures/</li>
+        <li>animations/</li>
+        <li>sounds/</li>
+        <li>music/</li>
+        <li>ui/</li>
+        <li>maps/</li>
+        <li>world/</li>
+        <li>player/</li> 
+        <li>camera/</li>
+        <li>physics/</li>
+        <li>index.html</li>
+        <li>main.js</li>
+        <li>package.json</li>
+
+    </ul>
+
+    <ul>50.4 Animationen        
+        <li>Idle</li>
+        <li>Walk</li>
+        <li>Run</li>
+        <li>Jump</li>
+        <li>Attack</li>
+        <li>Sit</li>
+        <li>Dance</li>
+        <li>Dead</li>
+        <li>Stretch</li>
+        <li>Sleep</li>
+        <li>Hover</li>
+        <li>Fly</li>
+        <li>Land</li>
+        <li>TankeOff</li>
+        <li>Swim</li>
+        <li>FastSwim</li>
+        <li>Turn</li>
+    </ul>
+
+    <ul>50.5 Objekt - Bewegungen        
+        <li>mehrer hunder Objekte</li>
+        <li>tasende Bäume mit Optimierung</li>
+        <li>dynamisches Licht</li>
+        <li>Schatten</li>
+        <li>Partkeleffekte</li>
+        <li>flüssige 60 FPS</li>
+    </ul>
+
+    <ul>50.6 Welt
+        <li>Frei beweglich 3D</ul>
+        <li>3rd oder First Person View optional</li>
+        <li>WASD steuerung oder Console</li>
+        <li>Kameras frei drehbar</li>
+        <li>Türen und andere Objekte animiert</li>
+        <li>npcs möglichst lebhaft gestalten</li>
+        <li>Jedes Tier bekommt eigene Animationen</li>
+        <li>Jedes Tier erhält sich individuell</li>
+        <li></li>
+    </ul>
+
+    <ul>50.7 Installation
+        <li>1. Verzeichnuisstruktur anlegen</ul>
+        <li>2. Three installieren</li>
+        <li>3. Erste Szene bauen</li>
+        <li>4. Kamera</li>
+        <li>5. Erste Spielfigur Hund Animationen siehe oben Idle usw.</li>
+        <li>6. Weiter Tiere Katze,Biene,Fisch</li>
+        <li>7. Objekte bauen </li>
+        <li>8. Erweiterungen</li>
+        <li></li>
+    </ul>
+    
+    <ul>50.8 Erste Szene
+        <li>Himmel, Sonne , Boden, amera, Licht</li>
+    </ul>   
+^
+    <ul>50.9 Kamera
+        <li>Mit der Maus drehbar sein</li>
+        <li>Zoombar sein</li>
+        <li>dem Spieler folgen</li>
+        <li>Wie bei modernen Spielen</li>
+    </ul>   
+
+    <ul>50.10 Objekte        
+        <li>Tiere</li>
+        <li>Bäume</li>
+        <li>Animationen</li>
+        <li>Karten bauen</li>
+        <li>Häuswer</li>
+        <li>Strassen</li>
+        <li>Wälder</li>
+        <li>Möbel</li>
+        <li>Türen</li>
+        <li>Fahrzeuge</li>
+        <li>Häuser</li>
+        <li>Seen</li>
+        <li>Flüsse</li>
+        <li>Wege</li>
+        <li>Brücken</li>
+        <li>Hölen</li>
+    </ul>
+
+    <ul>50.11 Erweiterungen        
+        <li>Wetter</li>
+        <li>Regen</li>
+        <li>Schnee</li>
+        <li>Tag / Nacht</li>
+        <li>NPC-Tiere</li>
+        <li>Inventar</li>
+        <li>Quests</li>
+        <li>Speichern</li>
+        <li>Multiplayer</li>
+        <li>Fahrzeuge</li>
+        <li>Häuser</li>
+        <li>Seen</li>
+        <li>Flüsse</li>
+        <li>Wege</li>
+        <li>Brücken</li>
+        <li>Hölen</li>
+    </ul>
+
+<h1>51. Erste spielbare Version (MVP)</h1>
+
+<p>Die erste spielbare Version umfasst:</p>
+
+<ul>
+    <li>3D-Welt</li>
+    <li>Kamera</li>
+    <li>Ein Tier</li>
+    <li>Bewegung</li>
+    <li>Kleines Grundstück</li>
+    <li>Haus</li>
+    <li>Einfache Ressourcen</li>
+    <li>Lager</li>
+    <li>Einfacher Transportauftrag</li>
+</ul>
+
+<p>Danach erfolgt eine schrittweise Erweiterung um:</p>
+
+<ul>
+    <li>Weitere Tiere</li>
+    <li>Berufe</li>
+    <li>Wirtschaft</li>
+    <li>Multiplayer</li>
+</ul>
+
+<h1>52. Erweiterungsmöglichkeiten</h1>
+
+<p>Später möglich:</p>
+
+<ul>
+    <li>Wetter</li>
+    <li>Jahreszeiten</li>
+    <li>Quests</li>
+    <li>Haustiere</li>
+    <li>Fahrzeuge</li>
+    <li>Große Städte</li>
+    <li>Gilden</li>
+    <li>Spielerbetriebe</li>
+    <li>Handelssysteme</li>
+    <li>Events</li>
+</ul>
+
+</div>
+</body>
+</html>

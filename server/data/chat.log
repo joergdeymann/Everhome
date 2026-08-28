@@ -1,0 +1,195 @@
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo Spieler 2 ich bin 1","timestamp":1787005096702}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Alloea","timestamp":1787005245817}
+{"type":"chat","scope":"admin","tag":"ADMIN","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"set","timestamp":1787005316565}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Bergbau","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"XXX","timestamp":1787005562431}
+{"type":"chat","scope":"group","tag":"PARTY","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"teat","timestamp":1787005628077}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1,2],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787005686712}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"xxx","timestamp":1787005830133}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"xxxx","timestamp":1787005840441}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"zwei","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"sddd","timestamp":1787005889823}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"alle1","timestamp":1787099202835}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"111","timestamp":1787099296097}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787099345892}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"teest","timestamp":1787099528493}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo1 vob 2","timestamp":1787182089093}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"ddd","timestamp":1787182159175}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"ddd","timestamp":1787182194514}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787182266205}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787182293566}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787182656075}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"gggg","timestamp":1787182772489}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"ggg","timestamp":1787182892474}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"mm","timestamp":1787182942569}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787183022254}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"abc","timestamp":1787184519841}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787184560073}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"ddd","timestamp":1787184874565}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"ddd","timestamp":1787184883028}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"wwww","timestamp":1787185232495}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787185572227}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[4],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"XXX","timestamp":1787185604756}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"XX","timestamp":1787185638061}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"tztz","timestamp":1787185674733}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"op","timestamp":1787185825095}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"ik","timestamp":1787185888766}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787186168001}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787320722355}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Tes","timestamp":1787321156926}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"/r juhu","timestamp":1787321220702}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"juhu","timestamp":1787321232118}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"/r","timestamp":1787321260358}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"XX","timestamp":1787321311198}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"/w moin","timestamp":1787321357206}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"moin","timestamp":1787321377031}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"GruppeX","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787321561681}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"GruppeX","targets":null,"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787321657641}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"GruppeX","targets":null,"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"moin","timestamp":1787321692929}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"GruppeX","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo in Gruppe","timestamp":1787321810114}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo Spieler 6","timestamp":1787321823178}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo 6","timestamp":1787321921523}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Haloo","timestamp":1787321936044}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"GruppeX","targets":null,"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Moin","timestamp":1787321950907}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"huhu","timestamp":1787321955924}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":6,"fromName":"Player 6","fromSpecies":"Schildkröte","fromAdmin":false,"text":"hihi","timestamp":1787321962659}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"Handel","timestamp":1787322626122}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Handel","targets":null,"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787322702026}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Handel","targets":null,"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"/p Player 5, Hallo","timestamp":1787322868860}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[5],"from":4,"fromName":"Player 4","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787322888044}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787411790958}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo 2","timestamp":1787411996088}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"ja","timestamp":1787412097425}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787412200515}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo2","timestamp":1787412207347}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"uuu","timestamp":1787412307347}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"H","timestamp":1787412443293}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"x","timestamp":1787412727361}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Bunt","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Bunt gestartet","timestamp":1787413235062}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Bunt","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787413279678}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Bunt","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Tabelle","timestamp":1787413356487}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo","timestamp":1787414435187}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787414541253}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"xx","timestamp":1787414548533}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"yy","timestamp":1787414572853}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787414689325}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo","timestamp":1787447008163}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo die 2.","timestamp":1787447081563}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787447132663}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787447145789}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787447152901}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"moin","timestamp":1787447189373}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hi","timestamp":1787447243814}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787447296597}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hi","timestamp":1787447366670}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Halol XXX","timestamp":1787447413400}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Test","timestamp":1787447618460}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo 3","timestamp":1787447812731}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"finde dich","timestamp":1787447901148}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787447926229}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"wieder da","timestamp":1787447986725}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"gut","timestamp":1787448553404}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"zuu","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787449149698}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"zuu","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"ddd","timestamp":1787449200514}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"g zuu","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787449264698}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"g zuu","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hi","timestamp":1787449444861}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787449493373}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"zuu","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"ich","timestamp":1787449518421}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787449786057}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hi","timestamp":1787449823698}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787449918401}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Moin","timestamp":1787449946745}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787449995203}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787450064453}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"xyz","timestamp":1787450254589}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hi","timestamp":1787450431065}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"x","timestamp":1787450519954}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"zx","timestamp":1787450665387}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Chaos","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo Chaos","timestamp":1787451289183}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Chaos","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo CHAOS","timestamp":1787451329407}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo Test#","timestamp":1787451337257}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787452056995}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Test","timestamp":1787453846320}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Chaos","targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"name","timestamp":1787453910953}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo","timestamp":1787500903568}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Test","timestamp":1787500955649}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"xxx","timestamp":1787501035752}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"d","timestamp":1787501398195}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787501878886}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787501911775}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"gruppe#","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787501949959}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Test","timestamp":1787502985152}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"sss","timestamp":1787502996182}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787519898677}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo Welt","timestamp":1787519913686}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787519942380}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Handel","timestamp":1787519977463}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Das noch der Handel","timestamp":1787520048277}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo Grupe","timestamp":1787520117878}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"XXX","timestamp":1787520159487}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"XXX","timestamp":1787520164230}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787520193919}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787520200031}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787520230120}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787520254351}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"test","timestamp":1787520260415}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"XX","timestamp":1787520535402}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe1","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Das ist Gruppe 1","timestamp":1787520751100}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe2","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Das ist Gruppe 2","timestamp":1787520763806}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe 2","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test gruppe 2","timestamp":1787520934693}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe1","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"dd","timestamp":1787521082425}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Gruppe","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787521132392}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787521495044}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787521584836}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787522344517}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":",w Hallo","timestamp":1787522652678}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"HH","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787522761774}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"HH","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"NIX","timestamp":1787523032824}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787523312791}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"HH","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"schreib","timestamp":1787523446356}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"HH","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"schreib","timestamp":1787523455996}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608597113}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo","timestamp":1787608660972}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787608782243}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608806748}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608813901}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test2","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608950780}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test1","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608958684}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test1","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787608980662}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787609046521}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787609063608}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787609116777}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787609143656}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787609242040}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"huh","timestamp":1787609572652}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Moin","timestamp":1787609615052}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":2,"fromName":"Player 2","fromSpecies":"Katze","fromAdmin":false,"text":"Moin","timestamp":1787609651924}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"hallo","timestamp":1787609682672}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Huhu","timestamp":1787609728727}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test1","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"hallol","timestamp":1787609764766}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Test","timestamp":1787609822720}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787609964935}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"AHA","timestamp":1787610015087}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"hallo","timestamp":1787610153349}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test1","targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787610229475}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Hallo","timestamp":1787610239705}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Halllo","timestamp":1787610266395}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[2],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787610732047}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hallo","timestamp":1787610895498}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test1","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Hi","timestamp":1787611079475}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test2","targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"GO","timestamp":1787611088843}
+{"type":"chat","scope":"all","tag":"WORLD","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"Test","timestamp":1787611099386}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[3],"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"XXXX","timestamp":1787611112709}
+{"type":"chat","scope":"admin","tag":"ADMIN","groupName":null,"targets":null,"from":1,"fromName":"Player 1","fromSpecies":"Hund","fromAdmin":false,"text":"test","timestamp":1787613812511}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[1],"from":3,"fromName":"Player 3","fromSpecies":"Schildkröte","fromAdmin":false,"text":"Guten Abend","timestamp":1787694057596}
+{"type":"chat","scope":"world","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787785841841}
+{"type":"chat","scope":"trade","tag":"TRADE","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Handel","timestamp":1787785846872}
+{"type":"chat","scope":"world","tag":"WORLD","groupName":null,"targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787785854216}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Event","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787785889655}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Event Gruppe","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"xx","timestamp":1787785915366}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Hallo","timestamp":1787785946391}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Event Gruppe","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787785963802}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Nachricht","timestamp":1787786003728}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[7],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"XX","timestamp":1787786036071}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[7],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"Hsllo","timestamp":1787786111088}
+{"type":"chat","scope":"selected","tag":"CHAT","groupName":null,"targets":[6],"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"test","timestamp":1787786145320}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"x","timestamp":1787787913983}
+{"type":"chat","scope":"group","tag":"EVENT","groupName":"Test","targets":null,"from":5,"fromName":"Player 5","fromSpecies":"Katze","fromAdmin":false,"text":"HU","timestamp":1787787921865}

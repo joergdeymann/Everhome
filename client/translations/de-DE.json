@@ -1,0 +1,45 @@
+{
+    "effects": {
+        "poison": "Gift",
+        "healing": "Heilung"
+    },
+
+    "animals": {
+        "fox": "Fuchs",
+        "cat": "Katze",
+        "dog": "Hund"
+    },
+
+    "actions": {
+        "sit": "Sitzen",
+        "walk": "Laufen",
+        "run": "Rennen",
+        "sneak": "Schleichen",
+        "makeSound": "Laut erzeugen"
+    },
+
+    "attribute": {
+        "health": "Gesundheit",
+        "stamina": "Ausdauer",
+        "mana": "Mana",
+        "strength": "Stärke",
+        "speed": "Geschwindigkeit",
+        "dexterity": "Geschick",
+        "intelligence": "Intelligenz",
+        "resistance": "Widerstandsfähigkeit",
+        "perception": "Wahrnehmung"
+    },
+
+    "warning": {
+        "healthLow": "Gesundheit kritisch!",
+        "staminaLow": "Ausdauer niedrig!"
+    },
+
+    "button": {
+        "startEffects": "Starte Effekte",
+        "stopEffects": "Stoppe Effekte",
+        "restartEffects": "Restart Effekte"
+    }
+
+
+}

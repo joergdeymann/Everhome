@@ -1,0 +1,43 @@
+1. Bilgeneration
+1.1 ai
+    Leonardo.ai
+        https://app.leonardo.ai/
+        Hat mit ein gutes Login Bild generiert, leider 1:1 statt in 1:9
+
+    Recraft.ai
+        - Hat daraus ein 16:9 hervorrangend ausgeweitet
+        - neue Tiere waren etwas blass und nicht sauber abgeschnitten
+        - auch ein Passendes Schild wurde mir generiert (vielleicht auch Leonadro)
+    
+1.2 Bildbeareitung
+    Gimp
+        http://
+        hervorragend um weichzeichennen und Farbschichtungen
+        kostenlos
+
+1.3 
+
+2. Bauen von Bewegeungen, Skelette 
+
+
+3. Chats
+3.1 KI
+    ChatGPT
+    - Vergesslich
+    - Kann gute Texte ausrbeiten und Vorschläge machen
+    - für kleiner COdeschnipse geeignet
+
+    Geminei
+    - nur schlechte Erfahrung gemcht
+
+    Claude.ai
+    - Wohl das Leistungsfähigste Paket was rogramierung angeht
+    - nach einer Arbeit die immer grösser wird sollte man sich aber das ganze in Teile ausarbeiten , 
+        sonst muss amn mehrere male auf weiter gehen und die Tokens sind verbraucht
+    
+    replit.com, 
+    - nach einer gewissen Zeit sind die Tokens aufgebraucht,
+    - ist nicht ganz so gut, kann man aber zur not nutzen
+    - hab es nur zum Coden ausprobiert
+    
+

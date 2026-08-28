@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>everhome — Debug Client</title>
+
+    <style>
+
+        :root {
+            --bg:        #14171c;
+            --panel:     #1b1f27;
+            --panel-alt: #20242e;
+            --line:      #2c313d;
+            --text:      #e6e8ec;
+            --text-dim:  #8890a0;
+            --health:    #4fb06a;
+            --health-bg: #2a2320;
+            --strength:  #c98a3f;
+            --accent:    #5b8def;
+            --danger:    #d9614f;
+
+            /* Chat-TAG-Farben */
+            --tag-world:        #e0a86c;
+            --tag-trade:        #d9c548;
+            --tag-area:         #d98a3f;
+            --tag-party:        #6c8cd9;
+            --tag-chat:         #4fb06a;
+            --tag-event:        #a06cd5;
+            --tag-announcement: #d9614f;
+            --tag-admin:        #3a5a99;
+            --tag-admin-gold:   #d4af37;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        h1 {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin: 0 0 4px 0;
+        }
+
+        .self-info {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .self-info span {
+            color: var(--accent);
+            font-family: "Consolas", monospace;
+        }
+
+        #send {
+            background: var(--accent);
+            color: #0b0e13;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #send:hover {
+            filter: brightness(1.1);
+        }
+
+        #send:active {
+            transform: translateY(1px);
+        }
+
+        /* --------------------------------------------------
+           Spieler-Boxen
+           -------------------------------------------------- */
+
+        #players {
+            display: flex;
+            gap: 2%;
+            margin-bottom: 24px;
+        }
+
+        .player-box {
+            width: 30%;
+            height: 260px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .player-box.is-self {
+            border-color: var(--accent);
+        }
+
+        .player-box.is-target {
+            background: rgba(91, 141, 239, 0.16);
+            border-color: var(--accent);
+        }
+
+        .player-box {
+            cursor: pointer;
+        }
+
+        .player-box:hover {
+            border-color: var(--accent);
+        }
+
+        .player-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .player-name .id-tag {
+            font-family: "Consolas", monospace;
+            font-size: 11px;
+            color: var(--text-dim);
+            font-weight: 400;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 8px 0;
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            width: 58px;
+            color: var(--text-dim);
+            flex-shrink: 0;
+        }
+
+        .stat-value {
+            font-family: "Consolas", monospace;
+            width: 68px;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 8px;
+            background: var(--health-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.15s linear;
+        }
+
+        .bar-fill.health {
+            background: var(--health);
+        }
+
+        .bar-fill.strength {
+            background: var(--strength);
+        }
+
+        .effects-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-dim);
+            margin: 4px 0 6px 0;
+        }
+
+        .effects-list {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .effect-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            background: var(--panel-alt);
+            border-radius: 4px;
+            padding: 4px 8px;
+            gap: 6px;
+        }
+
+        .effect-row .effect-value {
+            color: var(--text-dim);
+            font-size: 10px;
+            margin-left: 6px;
+        }
+
+        .effect-row .effect-instance-id {
+            color: var(--text-dim);
+            font-family: "Consolas", monospace;
+            font-size: 10px;
+            margin-left: 6px;
+        }
+
+        .effect-remove-btn {
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--danger);
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            line-height: 1;
+            cursor: pointer;
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        .effect-remove-btn:hover {
+            background: var(--danger);
+            color: var(--bg);
+            border-color: var(--danger);
+        }
+
+        .percent-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg);
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 3px;
+            padding: 0 4px;
+            vertical-align: middle;
+        }
+
+        .effect-row .effect-name {
+            font-weight: 600;
+        }
+
+        .effect-row .effect-id {
+            color: var(--text-dim);
+            font-family: "Consolas", monospace;
+            font-size: 10px;
+            margin-left: 6px;
+        }
+
+        .effect-row .effect-time {
+            font-family: "Consolas", monospace;
+            color: var(--accent);
+            font-size: 11px;
+        }
+
+        .no-effects {
+            color: var(--text-dim);
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        /* --------------------------------------------------
+           History / Chat
+           -------------------------------------------------- */
+
+        .history-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+        }
+
+        #chatPanel {
+            --active-chat-bg: var(--panel);
+            --active-chat-text: var(--text);
+            --active-border: var(--line);
+            border: 2px solid var(--active-border);
+            border-radius: 6px;
+            transition: border-color 0.2s ease;
+        }
+
+        /* Admin-Support gerade aktiv: goldener, edler Rahmen -
+           bleibt so lange, bis der Admin-Chat aktiv verlassen
+           wird. Übertrumpft die Tag-eigene Rahmenfarbe. */
+        #chatPanel.admin-active {
+            border-color: var(--tag-admin-gold) !important;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+        }
+
+        .chat-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3px;
+            padding: 4px 4px 0;
+        }
+
+        .chat-tab {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--line);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            padding: 4px 8px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .chat-tab .tab-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--tag-color, var(--text-dim));
+            flex-shrink: 0;
+        }
+
+        .chat-tab .tab-dot.outlined {
+            box-shadow: 0 0 0 1px #000;
+        }
+
+        .chat-tab.active {
+            border-color: var(--tag-color, var(--line));
+        }
+
+        .chat-tab .active-marker {
+            font-size: 9px;
+            color: var(--tag-admin-gold);
+        }
+
+        .chat-tab .tab-close {
+            color: inherit;
+            opacity: 0.6;
+            font-size: 10px;
+            line-height: 1;
+            padding: 0 2px;
+        }
+
+        .chat-tab .tab-close:hover {
+            opacity: 1;
+            color: var(--danger);
+        }
+
+        @keyframes chatTabBlink {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.8); }
+        }
+
+        .chat-tab.unread.blinking {
+            animation-name: chatTabBlink;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .chat-tab.admin-tab {
+            border-color: var(--tag-admin-gold);
+        }
+
+        .chat-active-target-label {
+            margin-left: auto;
+            font-size: 10px;
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 2px 4px;
+        }
+
+        .chat-active-target-label .clear-target {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .chat-active-target-label .clear-target:hover {
+            opacity: 1;
+            color: var(--danger);
+        }
+
+        .chat-settings-btn {
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--text-dim);
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        /* Verlauf + (optional) Setup nebeneinander, beide auf
+           gleicher Höhe wie gewohnt - das Setup drängt die
+           Nachrichten also nicht weg, sondern liegt daneben
+           (rechts). Die Breite richtet sich nach dem Inhalt
+           (Tabelle), nicht nach einem festen Wert. */
+        .chat-body {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .chat-settings-panel {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--panel-alt);
+            border-left: 1px solid var(--active-border, var(--line));
+            padding: 8px;
+            font-size: 10px;
+            width: max-content;
+            min-width: 260px;
+            max-width: 560px;
+            flex-shrink: 0;
+            height: 220px;
+            overflow: auto;
+        }
+
+        .chat-settings-panel.open {
+            display: flex;
+        }
+
+        /* Vergrößert-Modus: als zentriertes Overlay über der
+           ganzen Seite, Größe richtet sich nach dem Inhalt
+           (bis zu 90% der Bildschirmfläche), damit möglichst
+           ohne Scrollbalken alles sichtbar ist. */
+        .chat-settings-panel.maximized {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            min-width: 320px;
+            max-width: 95vw;
+            height: auto;
+            max-height: 90vh;
+            z-index: 1000;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--active-border, var(--line));
+            border-radius: 8px;
+        }
+
+        .chat-body:has(.chat-settings-panel.open) #history {
+            border-radius: 6px 0 0 6px;
+        }
+
+        .chat-settings-panel .maximize-btn {
+            align-self: flex-end;
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--text-dim);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .chat-settings-toggles {
+            display: flex;
+            gap: 14px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 4px;
+        }
+
+        .chat-settings-toggles label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-dim);
+            cursor: pointer;
+        }
+
+        .chat-style-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+
+        .chat-style-table th {
+            text-align: left;
+            color: var(--text-dim);
+            font-weight: 600;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
+
+        .chat-style-table td {
+            padding: 2px 4px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .chat-style-table tr {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .chat-style-table input[type="color"] {
+            width: 22px;
+            height: 18px;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .chat-style-table input[type="range"] {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .chat-style-table input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        .chat-leave-admin {
+            display: none;
+            margin: 4px 6px;
+            background: var(--tag-admin-gold);
+            color: #1a1400;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .chat-leave-admin.visible {
+            display: inline-block;
+        }
+
+        #history {
+            flex: 1;
+            min-width: 0;
+            background: var(--active-chat-bg);
+            color: var(--active-chat-text);
+            border-top: 1px solid var(--active-border);
+            border-radius: 0 6px 6px 6px;
+            padding: 10px 14px;
+            height: 220px;
+            overflow-y: auto;
+            font-family: "Consolas", monospace;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .log-line {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .log-line .msg-time {
+            opacity: 0.6;
+            font-size: 10px;
+            margin-right: 6px;
+        }
+
+        .log-line .tag {
+            font-weight: 700;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        .log-line .tag.system {
+            color: var(--text-dim);
+        }
+
+        .log-line .tag.effect {
+            color: var(--accent);
+        }
+
+        .log-line .admin-badge {
+            margin-right: 3px;
+        }
+
+        .log-line .msg-name {
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .log-line .msg-name:hover {
+            text-decoration: underline;
+        }
+
+        /* Per Strg/Cmd+Klick auf einen Reiter erzeugte Chat-Links
+           ("[[TAG]]"/"[[TAG:Wert]]") - klickbar, aktiviert beim
+           Empfänger denselben Kanal. */
+        .log-line .chat-link {
+            display: inline-block;
+            background: var(--panel-alt);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            padding: 0 5px;
+            margin: 0 2px;
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .log-line .chat-link:hover {
+            background: var(--accent);
+            color: #0b0e13;
+        }
+
+        /* Eingabefeld: markiert wenn ein Sende-Ziel "vorbereitet"
+           wurde (Klick auf Namen/Reiter oder ::/:p Kommando) -
+           ähnlich der Kennzeichnung von Systemnachrichten. */
+        #chatInput.target-prepared {
+            background: rgba(212, 175, 55, 0.12);
+            border-color: var(--tag-admin-gold);
+        }
+
+        /* --------------------------------------------------
+           Effekt-Katalog
+           -------------------------------------------------- */
+
+        #catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .catalog-card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 10px 12px;
+            cursor: pointer;
+        }
+
+        .catalog-card:hover {
+            border-color: var(--strength);
+        }
+
+        .catalog-card.is-selected {
+            background: rgba(201, 138, 63, 0.18);
+            border-color: var(--strength);
+        }
+
+        .catalog-card .catalog-name {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .catalog-card .catalog-id {
+            font-family: "Consolas", monospace;
+            font-size: 10px;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+        }
+
+        .catalog-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-dim);
+            margin-top: 2px;
+        }
+
+        .catalog-row span:last-child {
+            color: var(--text);
+            font-family: "Consolas", monospace;
+        }
+
+        /* Feste Breite + rechtsbündig, damit Zahlen beim
+           Aktualisieren nicht "springen" (Layout bleibt stabil). */
+        .num {
+            font-family: "Consolas", monospace;
+            font-variant-numeric: tabular-nums;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .num.w-stat {
+            min-width: 92px;
+        }
+
+        .num.w-time {
+            min-width: 48px;
+        }
+
+        .catalog-hint {
+            font-size: 10px;
+            color: var(--text-dim);
+            margin: -4px 0 8px 0;
+            font-style: italic;
+        }
+
+        .ticks-box {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--line);
+        }
+
+        .ticks-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+        }
+
+        .tick-row {
+            background: var(--panel-alt);
+            border-radius: 4px;
+            padding: 6px 8px;
+            margin-bottom: 6px;
+        }
+
+        .tick-row .tick-index {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--danger);
+            margin-bottom: 4px;
+        }
+
+        .tick-row .catalog-row {
+            font-size: 10px;
+        }
+
+        /* --------------------------------------------------
+           Chat
+           -------------------------------------------------- */
+
+        .chat-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        #chatInput {
+            flex: 1;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 8px 10px;
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        #chatInput:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        #chatSend {
+            background: var(--panel-alt);
+            color: var(--text);
+            border: 1px solid var(--line);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        #chatSend:hover {
+            border-color: var(--accent);
+        }
+
+        /* Auswahl-Zeile für den Chat-Scope (Alle / Ausgewählte
+           Spieler / Gruppe / SpielAdmin) */
+        .chat-scope-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .chat-scope-row select,
+        .chat-scope-row input {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 6px 8px;
+            color: var(--text);
+            font-size: 12px;
+        }
+
+        .chat-scope-row select:focus,
+        .chat-scope-row input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .chat-hint {
+            font-size: 10px;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        .chat-hint code {
+            background: var(--panel-alt);
+            border-radius: 3px;
+            padding: 1px 4px;
+        }
+
+        .chat-hint.hidden,
+        .chat-scope-row.hidden {
+            display: none;
+        }
+
+        /* --------------------------------------------------
+           Kombi-Modus / Wirken
+           -------------------------------------------------- */
+
+        .cast-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-dim);
+            cursor: pointer;
+        }
+
+        .mode-toggle input {
+            cursor: pointer;
+        }
+
+        #castButton {
+            display: none;
+            background: var(--strength);
+            color: #0b0e13;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        #castButton:hover:not(:disabled) {
+            filter: brightness(1.1);
+        }
+
+        #castButton:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* --------------------------------------------------
+           Abklingzeit-Markierung (Katalog-Karte)
+           -------------------------------------------------- */
+
+        .catalog-card.on-cooldown {
+            background:
+                linear-gradient(
+                    0deg,
+                    rgba(217, 97, 79, 0.16),
+                    rgba(217, 97, 79, 0.16)
+                ),
+                var(--panel-alt);
+            border-color: rgba(217, 97, 79, 0.35);
+        }
+
+        /* --------------------------------------------------
+           Wirk-Balken (pre / duration / post)
+           -------------------------------------------------- */
+
+        .cast-bar {
+            position: relative;
+            height: 5px;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 6px;
+            flex-basis: 100%;
+            width: 100%;
+            --cast-pre: #4a5568;
+            --cast-active: var(--accent);
+            --cast-post: rgba(139, 144, 160, 0.35);
+        }
+
+        .cast-bar-track {
+            position: absolute;
+            inset: 0;
+        }
+
+        .cast-bar-cover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: rgba(20, 23, 28, 0.82);
+        }
+
+        /* --------------------------------------------------
+           Reload-Button
+           -------------------------------------------------- */
+
+        .reload-button {
+            display: block;
+            margin: 8px 0 12px;
+            background: var(--panel-alt);
+            color: var(--text-dim);
+            border: 1px solid var(--line);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .reload-button:hover {
+            color: var(--text);
+            border-color: var(--accent);
+        }
+
+.player-panel {
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #555b68 transparent;
+}
+
+.player-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.player-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.player-panel::-webkit-scrollbar-thumb {
+    background: #555b68;
+    border-radius: 999px;
+}
+
+.player-panel::-webkit-scrollbar-thumb:hover {
+    background: #707786;
+}
+
+.player-panel::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.player-panel::-webkit-scrollbar-corner {
+    background: transparent;
+}        
+
+    </style>
+</head>
+
+<body>
+
+    <h1>everhome — Debug Client</h1>
+
+    <div class="self-info">
+        Eigene Spieler-ID: <span id="playerId">---</span>
+    </div>
+
+    <button id="send" type="button">
+        Testnachricht senden
+    </button>
+
+    <div id="players"></div>
+
+    <div class="cast-controls">
+        <label class="mode-toggle">
+            <input type="checkbox" id="comboModeToggle">
+            Kombi-Modus (mehrere Zauber gleichzeitig sammeln)
+        </label>
+        <button id="castButton" type="button">Wirken</button>
+    </div>
+
+    <div class="history-title">Effekt-Katalog</div>
+    <button id="reloadEffectsButton" type="button" class="reload-button">
+        ⟳ Serverdaten neu laden
+    </button>
+    <div id="catalog"></div>
+
+    <div class="history-title">Verlauf</div>
+
+    <div id="chatPanel">
+        <div id="chatTabs" class="chat-tabs"></div>
+        <button id="chatLeaveAdminButton" class="chat-leave-admin" type="button">
+            ✕ Admin-Chat verlassen
+        </button>
+        <div class="chat-body player-panel">
+            <div id="history"></div>
+            <div id="chatSettingsPanel" class="chat-settings-panel"></div>
+        </div>
+    </div>
+
+    <div id="chatScopeRow" class="chat-scope-row">
+        <select id="chatScope">
+            <option value="world">Welt</option>
+            <option value="selected">Ausgewählte Spieler</option>
+            <option value="group">Gruppe</option>
+            <option value="admin">SpielAdmin</option>
+        </select>
+
+        <select id="chatTargetSelect" multiple size="3" style="display: none;"></select>
+
+        <select id="chatGroupType" style="display: none;">
+            <option value="event">Event</option>
+            <option value="party">Party</option>
+        </select>
+
+        <input
+            type="text"
+            id="chatGroupName"
+            placeholder="Gruppenname (z.B. Bergbau)"
+            maxlength="40"
+            style="display: none;"
+        >
+    </div>
+
+    <div id="chatHint" class="chat-hint">
+        Kommandos (":" oder "/", "," oder ":" als Trenner): <code>:w Nachricht</code> (Welt) ·
+        <code>:h/:t Nachricht</code> (Handel) · <code>:a Nachricht</code> (Gebiet) ·
+        <code>:c Name, Nachricht</code> (privat/Chat) · <code>@Name, Nachricht</code> (Kurzform) ·
+        <code>:r Nachricht</code> (antworten) ·
+        <code>:e Name, Nachricht</code> (Event) · <code>:p Name, Nachricht</code> (Party) ·
+        <code>:g Nachricht</code> (zuletzt aktive Gruppe) ·
+        <code>::Gruppenname</code> oder <code>::Name</code> (aktivieren, optional <code>, Nachricht</code>) ·
+        <code>:exit Gruppenname</code> · <code>:whoami</code> · <code>:help</code>
+    </div>
+
+    <div class="chat-row">
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Nachricht..."
+            maxlength="200"
+        >
+        <button id="chatSend" type="button">Senden</button>
+    </div>
+
+    <script src="client.js"></script>
+
+</body>
+
+</html>

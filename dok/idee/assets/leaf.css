@@ -1,0 +1,44 @@
+.leaf {
+   position: relative;
+   border: 1px solid #526442;
+   border-radius: 18px;
+   padding: 20px 24px;
+   margin: 22px 0;
+}
+.leaf:before {
+   content: "";
+   position: absolute;
+   left: -36px;
+   top: 24px;
+   width: 18px;
+   height: 18px;
+   background: #7d9c57;
+   border-radius: 50% 50% 50% 0;
+   transform: rotate(-45deg);
+}
+.leaf span {
+   float: right;
+   background: #c49a43;
+   color: #222;
+   border-radius: 50%;
+   width: 34px;
+   height: 34px;
+   text-align: center;
+   font-weight: bold;
+   line-height: 34px;
+}
+.tree-rail {
+   border-left: 4px solid #60784b;
+   margin: 35px 0;
+   padding-left: 24px;
+}
+.leaf h2 {
+   margin: 0.0em 0;
+}
+a.leaf {
+   display: block;
+   text-decoration: none;
+}
+a.leaf:hover {
+   border-color:  var(--hover);
+}

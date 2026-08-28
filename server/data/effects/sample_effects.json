@@ -1,0 +1,139 @@
+{
+    "effects": [
+        {
+            "networkId": 1,
+            "id": "heal",
+            "attribute": "health",
+            "priority": 0,
+            "isPercent": false,
+            "baseChange": false,
+            "delay": 300,
+            "duration": 0,
+            "cooldown": 3000,
+            "instances": 1,
+            "ticks": [
+                {
+                    "valueChange": 10,
+                    "maxChange": 0,
+                    "count": 1,
+                    "preTime": 0,
+                    "duration": 300,
+                    "postTime": 0
+                }
+            ]
+        },
+        {
+            "networkId": 2,
+            "id": "heal.percent",
+            "attribute": "health",
+            "priority": 0,
+            "isPercent": true,
+            "baseChange": false,
+            "delay": 0,
+            "duration": 0,
+            "cooldown": 0,
+            "instances": 1,
+            "ticks": [
+                {
+                    "valueChange": 10,
+                    "maxChange": 0,
+                    "count": 3,
+                    "preTime": 0,
+                    "duration": 0,
+                    "postTime": 2000
+                }
+            ]
+        },
+        {
+            "networkId": 3,
+            "id": "health.max.buff",
+            "attribute": "health",
+            "priority": 0,
+            "isPercent": true,
+            "baseChange": true,
+            "delay": 0,
+            "duration": null,
+            "cooldown": 0,
+            "instances": 1,
+            "targetInstances": 1,
+            "ticks": [
+                {
+                    "valueChange": 0,
+                    "maxChange": -10,
+                    "count": 1,
+                    "preTime": 0,
+                    "duration": 0,
+                    "postTime": 0
+                }
+            ]
+        },
+        {
+            "networkId": 4,
+            "id": "poison",
+            "attribute": "health",
+            "priority": -3,
+            "isPercent": false,
+            "baseChange": false,
+            "delay": 0,
+            "duration": 2000,
+            "cooldown": 0,
+            "instances": 1,
+            "ticks": [
+                {
+                    "valueChange": -15,
+                    "maxChange": 0,
+                    "count": null,
+                    "preTime": 0,
+                    "duration": 2000,
+                    "postTime": 0
+                }
+            ]
+        },
+        {
+            "networkId": 5,
+            "id": "strength.equipment",
+            "attribute": "strength",
+            "priority": 1,
+            "isPercent": false,
+            "baseChange": true,
+            "delay": 0,
+            "duration": null,
+            "cooldown": 3000,
+            "instances": 1,
+            "targetInstances": 1,
+            "ticks": [
+                {
+                    "valueChange": 0,
+                    "maxChange": 15,
+                    "count": 1,
+                    "preTime": 0,
+                    "duration": 0,
+                    "postTime": 0
+                }
+            ]
+        },
+        {
+            "networkId": 6,
+            "id": "strength.buff",
+            "attribute": "strength",
+            "priority": 1,
+            "isPercent": true,
+            "baseChange": true,
+            "delay": 0,
+            "duration": null,
+            "cooldown": null,
+            "instances": 2,
+            "targetInstances": 1,
+            "ticks": [
+                {
+                    "valueChange": 0,
+                    "maxChange": 0.1,
+                    "count": null,
+                    "preTime": 1000,
+                    "duration": 1000,
+                    "postTime": 10000
+                }
+            ]
+        }
+    ]
+}

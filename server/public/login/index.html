@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everhome - Login</title>
+</head>
+<script>
+let characterImageIndex = 1;
+
+let characterPositions = [
+    "character0",
+    "character1",
+    "character2",
+    "character3",
+    "character4"
+];
+
+let charcterImages = [
+    "./img/temporary-fox.png",
+    "./img/temporary-owl.png",
+    "./img/temporary-rabbit.png",
+    "./img/temporary-owl.png",
+    "./img/temporary-owl.png",
+    "./img/temporary-owl.png",
+    "./img/temporary-fox.png",
+    "./img/temporary-fox.png",
+    "./img/temporary-fox.png",
+    "./img/temporary-rabbit.png",
+    "./img/temporary-rabbit.png",
+    "./img/temporary-rabbit.png",
+];
+
+function prepareCharacterImages() {
+    for (let i = 1; i < 5; i++) {
+        const img = document.querySelector(`#character${i} img`);
+        img.src = charcterImages[i-1];
+    }
+    const img = document.querySelector(`#character${0} img`);
+    img.src = charcterImages[charcterImages.length-1];
+    applyCharacterPositions();
+}
+
+function removePositions() {
+    for(characterPosition of characterPositions) {
+        document.getElementById(characterPosition).classList.remove("p0", "p1", "p2", "p3" ,"p4");
+    }
+}
+
+    
+function applyCharacterPositions() {
+    removePositions();
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        document.getElementById(characterPositions[i]).classList.add("p" + i);
+    }
+
+    // document.getElementById(characterPositions[0]).className = "character p0";
+    // document.getElementById(characterPositions[1]).className = "character p1";
+    // document.getElementById(characterPositions[2]).className = "character p2";
+    // document.getElementById(characterPositions[3]).className = "character p3";
+    // document.getElementById(characterPositions[4]).className = "character p4";
+}
+
+
+function rotationRight() {
+    const last = characterPositions.pop();
+
+    characterImageIndex--;
+    if (characterImageIndex < 0) {
+        characterImageIndex = charcterImages.length - 1;
+    }
+
+    let i = characterImageIndex-2;
+    if (i < 0) {
+        i+= charcterImages.length;
+    }
+
+    characterPositions.unshift(last);
+    document.getElementById(last).querySelector("img").src = charcterImages[i];
+    applyCharacterPositions();
+    document.getElementById(last).classList.add("hidden");
+
+}
+function rotationLeft() {
+
+    const first = characterPositions.shift();
+
+    characterImageIndex++;
+    if (characterImageIndex >= charcterImages.length) {
+        characterImageIndex = 0;
+    }
+
+    let i = characterImageIndex+2;
+    if (i >= charcterImages.length) {
+        i-= charcterImages.length;
+    }
+
+    characterPositions.push(first);
+    document.getElementById(first).querySelector("img").src = charcterImages[i];
+    applyCharacterPositions();
+    document.getElementById(first).classList.add("hidden");
+}
+
+function removeActiovated() {
+    for(characterPosition of characterPositions) {
+        document.getElementById(characterPosition).classList.remove("activated");
+    }
+}
+
+window.onload = function() {
+    prepareCharacterImages();
+    setTimeout(function() {
+        document.body.style.opacity = 1;
+    }, 1000);
+
+
+    for(let i = 1; i < 4; i++) {
+        characterid=characterPositions[i];
+
+        document.getElementById(characterid).addEventListener("click", function() {
+            removeActiovated();
+            document.getElementById(characterid).classList.add("activated");
+        });
+    };
+
+
+    let allowrotation = true;
+    document.addEventListener("keydown", function(event) {
+        if (allowrotation) {
+            keydown = false;
+
+            if (event.key === "ArrowLeft") {
+                allowrotation = false;
+                keydown = true;
+                rotationLeft();
+            }
+
+            if (event.key === "ArrowRight") {
+                allowrotation = false;
+                keydown = true;
+                rotationRight();
+            }
+            
+            if (keydown) {
+                setTimeout(() => {allowrotation = true;}, 500);
+            }
+        }
+
+    });
+
+};
+</script>
+<style>
+    :root {
+        --time: 0.5s;
+    }
+    body {
+        /* --time: 0.5s; */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background: url(./img/temporary-login-background.png);
+        background-size: cover;
+        transition: opacity 1s ease-in;
+        opacity: 0;        
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow:hidden;
+    }
+    .character-switch {
+        position: relative;
+        top:0;
+        width: 600px;
+        height: 240px;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+    .character {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        bottom: 0px;
+        margin-bottom:50px;
+        transform-origin: center 400%;
+        transition: 
+            rotate var(--time) ease-in-out,
+            width var(--time) ease-in-out,
+            height var(--time) ease-in-out;
+    }
+    .character>* {
+        transition: 
+            rotate var(--time) ease-in-out;
+    }
+
+
+    .character.p0 {
+        rotate: -50deg;
+    }
+    .character.p4 {
+        rotate: +50deg;
+    }
+
+    .character.p1 {
+        rotate: -25deg;
+    }
+
+    .character.p2 {
+        rotate: 0deg;
+        width: 180px;
+        height: 180px;
+    }
+    .character.p3 {
+        rotate: 25deg;
+    }
+
+
+    .character.p1>img {
+        rotate: +25deg;
+        transition: 
+            rotate var(--time) ease-in-out;
+    }
+    .character.p2>img {
+        rotate: +0deg;
+        transition: 
+            rotate var(--time) ease-in-out;
+        /* Rechts, Unten, Weichzeichnung (0 für harte Kante), Farbe */
+        /* filter: 
+            drop-shadow(-2px  0px 0px #000)
+            drop-shadow( 2px  0px 0px #000)
+            drop-shadow( 0px -2px 0px #000)
+            drop-shadow( 0px  2px 0px #000); */
+     
+        /* Erzeugt einen weichen, blauen Leuchtrahmen um die Figur */
+        
+    }
+    .character:hover>img {
+        filter: drop-shadow(0px 0px 10px #00d2ff); 
+        cursor: pointer;
+    }
+
+    .character.activated>img {
+        filter: drop-shadow(0px 0px 10px #32af47); 
+    }
+
+
+    .character.p3>img {
+        rotate: -25deg;
+        transition: 
+            rotate var(--time) ease-in-out;
+    }
+    .character.p0>img {
+        rotate: +50deg;
+    }
+    .character.p4>img {
+        rotate: -50deg;
+    }
+    
+    
+    .login-area {
+        position: relative;
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        height: 400px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        /* box-shadow: 0px 0px 10px rgba(0,0,0,0.5); */
+        box-shadow: 0px 0px 10px rgba(255,255,255,0.2);    
+    }
+
+    .input-fade2 {
+        /* Maske für moderne Browser */
+        mask-image: radial-gradient(
+            ellipse at center, 
+            black 20%, 
+            transparent 90%
+        );
+        
+        /* Wichtig für die Kompatibilität (z.B. Chrome/Safari) */
+        -webkit-mask-image: radial-gradient(
+            ellipse at center, 
+            black 20%, 
+            transparent 90%
+        );
+    }
+
+    .input-fade {
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 80px, black calc(100% - 80px), transparent),
+                            linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+        
+        /* Kombiniert beide Masken, sodass sie sich kreuzen */
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
+
+
+    .input-block {
+        position: absolute;
+        bottom:0;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .input-area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .input-area-background {
+
+    }
+
+    .input-area-foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+
+   .input-field {
+       width: 60%;
+       height:50px;
+       rotate: -10deg;
+       outline: none;
+       border: none;
+       color:rgb(109, 52, 11);
+       background-color: transparent;
+       font-size: 2rem;
+       font-weight: 700;
+       text-align: center;
+       text-shadow: 
+        -1px -1px 0 rgba(0,0,0,0.5),
+         1px -1px 0 rgba(0,0,0,0.5),
+        -1px  1px 0 rgba(0,0,0,0.5),
+         1px  1px 0 rgba(0,0,0,0.5);
+   }
+   .input-field::placeholder {
+       color:rgb(109, 52, 11, 0.8);
+       color:rgb(143, 93, 1);
+       text-shadow: 
+        -1px -1px 0 rgba(0,0,0,0.5),
+         1px -1px 0 rgba(0,0,0,0.5),
+        -1px  1px 0 rgba(0,0,0,0.5),
+         1px  1px 0 rgba(0,0,0,0.5);
+   }
+    .input-block img,
+    .character img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: transparent;
+    }
+
+    /* Versteckt das Element und bricht die Animation/Transition sofort ab */
+    .hidden * {
+            visibility: hidden;
+            /* border: 2px solid red; */
+    } 
+</style>
+
+
+<body>
+    <div class="login-area">
+        <div class="input-block">
+            <div class="input-area">
+                <img class="input-fade" src="./img/temporary-login-input.png">
+                <div class="input-area-foreground">
+                    <input class="input-field" type="text" placeholder="Dein Spieler Name">
+                </div>
+            </div>
+        </div>
+        <div class="character-switch">
+            <div id="character0" class="character p0"><img ></img></div>
+            <div id="character1" class="character p1"><img ></img></div>
+            <div id="character2" class="character p2"><img ></img></div>
+            <div id="character3" class="character p3"><img ></img></div>
+            <div id="character4" class="character p4"><img ></img></div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everhome - Login</title>
+</head>
+<script>
+// Die Reihenfolge der Bilder, die den Charakter-Slots fest zugewiesen sind
+let characterImages = [
+    "./img/temporary-fox.png",    // Slot 0 (Links verdeckt)
+    "./img/temporary-fox.png",    // Slot 1 (Sichtbar links)
+    "./img/temporary-owl.png",    // Slot 2 (Sichtbar Mitte)
+    "./img/temporary-rabbit.png", // Slot 3 (Sichtbar rechts)
+    "./img/temporary-fox.png"     // Slot 4 (Rechts verdeckt)
+];
+
+function updateCharacterImages() {
+    // Weist jedem Slot das entsprechende Bild aus dem rotierenden Array zu
+    for (let i = 0; i < 5; i++) {
+        const img = document.querySelector(`#character${i} img`);
+        if (img) {
+            img.src = characterImages[i];
+        }
+    }
+}
+
+function rotationLeft() {
+    // Holt das letzte Bild (rechts) und schiebt es nach ganz vorne (links)
+    const last = characterImages.pop();
+    characterImages.unshift(last);
+    updateCharacterImages();
+}
+
+function rotationRight() {
+    // Holt das erste Bild (links) und schiebt es nach ganz hinten (rechts)
+    const first = characterImages.shift();
+    characterImages.push(first);
+    updateCharacterImages();
+}
+
+window.onload = function() {
+    // Sanftes Einblenden der Seite nach dem Laden
+    setTimeout(function() {
+        document.body.style.opacity = 1;
+    }, 1000);
+
+    // Initialer Bild-Abgleich beim Start
+    updateCharacterImages();
+
+    // Tastatur-Steuerung abfangen
+    document.addEventListener("keyup", function(event) {
+        if (event.key === "ArrowLeft") {
+            rotationLeft();
+        }
+        if (event.key === "ArrowRight") {
+            rotationRight();
+        }
+    });
+};
+</script>
+<style>
+    body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background: url(./img/temporary-login-background.png);
+        background-size: cover;
+        transition: opacity 1s ease-in-out;
+        opacity: 0;        
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow: hidden;
+    }
+    .login-area {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        height: 400px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(255,255,255,0.2);    
+    }
+    .character-switch {
+        position: relative;
+        top: 0;
+        width: 600px;
+        height: 240px;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+    .character {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        bottom: 0px;
+        margin-bottom: 50px;
+        transform-origin: center 400%;
+        transition: 
+            rotate 2s ease-in-out,
+            width 2s ease-in-out,
+            height 2s ease-in-out;
+    }
+    .character img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: transparent;
+        transition: rotate 2s ease-in-out;
+    }
+
+    /* Feste Positionierung und Rotation gekoppelt an die IDs */
+    #character0 { rotate: -50deg; }
+    #character1 { rotate: -25deg; }
+    #character2 { rotate: 0deg; width: 180px; height: 180px; }
+    #character3 { rotate: 25deg; }
+    #character4 { rotate: +50deg; }
+
+    /* Feste Gegenrotation für die Bilder in den Slots */
+    #character0>img { rotate: +50deg; }
+    #character1>img { rotate: +25deg; }
+    #character2>img { rotate: 0deg; }
+    #character3>img { rotate: -25deg; }
+    #character4>img { rotate: -50deg; }
+
+    /* Die äußeren Plätze (0 und 4) sind optisch komplett ausgeblendet */
+    #character0, #character4 {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .input-block {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .input-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: transparent;
+    }
+    .input-area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .input-area-foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   .input-field {
+       width: 60%;
+       height: 50px;
+       rotate: -10deg;
+       outline: none;
+       border: none;
+       color: rgb(109, 52, 11);
+       background-color: transparent;
+       font-size: 2rem;
+       font-weight: 700;
+       text-align: center;
+   }
+   .input-field::placeholder {
+       color: rgb(143, 93, 1);
+   }
+</style>
+<body>
+    <div class="login-area">
+        <div class="input-block">
+            <div class="input-area">
+                <img src="./img/temporary-login-input.png" alt="Eingabe Hintergrund">
+                <div class="input-area-foreground">
+                    <input class="input-field" type="text" placeholder="Dein Spieler Name">
+                </div>
+            </div>
+        </div>
+        <div class="character-switch">
+            <!-- Die Slots bleiben an Ort und Stelle, nur die Bilder darin ändern sich -->
+            <div id="character0" class="character"><img></div>
+            <div id="character1" class="character"><img></div>
+            <div id="character2" class="character"><img></div>
+            <div id="character3" class="character"><img></div>
+            <div id="character4" class="character"><img></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+    "characters": [
+        {
+            "id": "test",
+            "name": "Test Character",
+            "attributes": {
+                "health": 100,
+                "stamina": 100,
+                "mana": 0,
+
+                "strength": 10,
+                "speed": 10,
+                "dexterity": 10,
+                "intelligence": 10,
+                "resistance": 10,
+                "perception": 10
+            }
+        },
+        {
+            "id": "wolf",
+            "name": "Wolf",
+            "attributes": {
+                "health": 80,
+                "stamina": 120,
+                "mana": 0,
+
+                "strength": 15,
+                "speed": 18,
+                "dexterity": 14,
+                "intelligence": 5,
+                "resistance": 12,
+                "perception": 20
+            }
+        },
+        {
+            "id": "rabbit",
+            "name": "Rabbit",
+            "attributes": {
+                "health": 40,
+                "stamina": 150,
+                "mana": 0,
+
+                "strength": 4,
+                "speed": 25,
+                "dexterity": 20,
+                "intelligence": 5,
+                "resistance": 3,
+                "perception": 25
+            }
+        }
+    ]
+}

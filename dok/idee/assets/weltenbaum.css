@@ -1,0 +1,55 @@
+.ability-leaf {
+    width: 180px;
+    aspect-ratio: 1 / 1.25;
+
+    position: relative;
+
+    background-image: url("./img/Blattüberladen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: 0.2s;
+    margin: 1em;
+}
+
+.ability-leaf:hover {
+    transform: scale(1.05);
+}
+
+.ability-leaf.selected::after {
+    content: "";
+
+    position: absolute;
+    inset: -8px;
+
+    border: 3px solid gold;
+    border-radius: 45% 45% 45% 45%;
+
+    box-shadow:
+        0 0 10px gold,
+        0 0 25px gold;
+
+    pointer-events: none;
+}
+
+.leaf-content {
+    position: absolute;
+
+    inset: 20% 15%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ability-level {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ability-name {
+    text-align: center;
+    font-weight: bold;
+}
