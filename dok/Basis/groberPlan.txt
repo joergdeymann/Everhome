@@ -1,0 +1,36 @@
+Arbeite das Dokument aus, es ist ein Chatverlauf und eine Ideensammlung
+Es soll ein Gutes GDD erstellt werden, alles was besprochen wurde soll mit aufgeführtt weren, 
+Dinge die nicht entscheiden wurden sollen in einem extra bereich, Dinge die Entschieden wurden kommen in das GDD
+Es soll eine Übersichtsbuch geben in dem man grundlegend alles sieht was für Ideen gefunden wurdn.
+- Dann soll es Mehrere Dateien Geben.
+- Die Dateien sollen alle als HTML geben und verlinkt sein.
+- Bilder und Icons sind Ausdrücklich erlaubt
+- Eine Ordnerstrucktur bauen die Passt
+- 
+- Pro Baum (mit Blättern) 
+- Pro Beruf 
+- Pro Gebäude 
+- Pro Fahrzeug/Maschine
+- für Runen und Juwelen und Verzauberungen 
+- der Bergbau mit den ganzen Ideen 
+- die grossen Öffentlichen Bäume 
+- Aufbau der Karten (Suchkarte, Öffentliche und Gruppenkarte an der Wand, eigene Karte)
+- Aufbau der Spielewelt 
+- Aufbau der Spielmechaniken
+- UI des Spielers
+- Ein Fortschrittsübersicht, was wie weit, was fehlt noch
+- Rezepte / Vorlagen 
+- Preismodell
+- Marketing
+- Videogenerierungen
+- Start des Programms 
+	->(Charackter Type Aussehen usw, Beruf optional) 
+	->Hinführung zum Spielers
+	->Quests für den ersten Einstieg
+- Quests
+- NPC 
+- Grundkonzept: Name Startdatum, Ziele, Forderungen
+- Zusammenarbeit mit den Berufen
+
+
+	

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#143224"/>
+      <stop offset="50%" stop-color="#091410"/>
+      <stop offset="100%" stop-color="#020504"/>
+    </radialGradient>
+    <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#23130b"/>
+      <stop offset="50%" stop-color="#4a3121"/>
+      <stop offset="100%" stop-color="#1a0d07"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdc622"/>
+      <stop offset="100%" stop-color="#ff8a8a"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f4626"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <path id="leaf" d="M 0,0 C -12,-15 -12,-35 0,-45 C 12,-35 12,-15 0,0"/>
+  </defs>
+
+  <!-- HINTERGRUND -->
+  <rect width="800" height="800" fill="url(#bg)"/>
+
+  <!-- BODEN -->
+  <ellipse cx="400" cy="740" rx="390" ry="70" fill="#0b1711"/>
+  <path d="M 50,750 Q 250,710 400,735 T 750,750 L 800,800 L 0,800 Z" fill="#050a07"/>
+
+  <!-- WURZELN -->
+  <g stroke="url(#trunk)" stroke-linecap="round" fill="none">
+    <path d="M 340,650 Q 250,710 130,760" stroke-width="26"/>
+    <path d="M 370,660 Q 310,730 200,775" stroke-width="18"/>
+    <path d="M 460,650 Q 550,710 670,760" stroke-width="26"/>
+    <path d="M 430,660 Q 490,730 600,775" stroke-width="18"/>
+  </g>
+
+  <!-- STAMM -->
+  <path d="M 330,670 C 340,540 310,440 330,370 C 350,330 380,300 350,250 L 390,240 C 420,290 410,330 430,360 C 450,420 420,540 470,670 Z" fill="url(#trunk)"/>
+  
+  <!-- RINDEN-STRUKTUR -->
+  <g stroke="#120a05" stroke-width="3" fill="none" opacity="0.6">
+    <path d="M 360,650 C 370,550 340,460 360,380"/>
+    <path d="M 440,650 C 420,550 430,460 410,380"/>
+    <path d="M 400,640 C 395,530 405,450 385,390"/>
+  </g>
+
+  <!-- MAGISCHE RUNENTÜR -->
+  <ellipse cx="400" cy="580" rx="15" ry="25" fill="#030705" stroke="#2a180e" stroke-width="3"/>
+  <path d="M 400,563 L 400,597 M 400,572 L 410,565 M 400,572 L 390,565 M 400,588 L 410,595 M 400,588 L 390,595" stroke="#ffd700" stroke-width="2" fill="none" filter="url(#glow)"/>
+
+  <!-- ÄSTE & EMITTIERTE SPIRALEN -->
+  <g stroke="url(#trunk)" stroke-linecap="round" fill="none">
+    <path d="M 330,400 Q 220,380 140,430" stroke-width="16"/>
+    <path d="M 470,400 Q 580,380 660,430" stroke-width="16"/>
+  </g>
+
+  <!-- LEUCHTENDE SCHNÖRKEL -->
+  <g stroke-linecap="round" fill="none" stroke-width="4" filter="url(#glow)">
+    <!-- Links (Cyan) -->
+    <path d="M 340,350 C 270,330 240,240 180,270 C 140,290 150,350 200,340 C 230,330 230,290 200,290" stroke="url(#cyanGrad)"/>
+    <path d="M 310,430 C 210,430 170,480 120,440" stroke="url(#cyanGrad)"/>
+    <!-- Rechts (Gold) -->
+    <path d="M 460,350 C 530,330 560,240 620,270 C 660,290 650,350 600,340 C 570,330 570,290 600,290" stroke="url(#goldGrad)"/>
+    <path d="M 490,430 C 590,430 630,480 680,440" stroke="url(#goldGrad)"/>
+  </g>
+
+  <!-- GRÜNE BLÄTTER-KRONE -->
+  <g fill="url(#leafGrad)">
+    <use href="#leaf" x="200" y="200" transform="rotate(-40 200 200)"/>
+    <use href="#leaf" x="140" y="260" transform="rotate(-75 140 260) scale(0.9)"/>
+    <use href="#leaf" x="110" y="340" transform="rotate(-105 110 340)"/>
+    <use href="#leaf" x="150" y="400" transform="rotate(-90 150 400) scale(0.8)"/>
+    <use href="#leaf" x="250" y="140" transform="rotate(-15 250 140)"/>
+    <use href="#leaf" x="320" y="100" transform="rotate(10 320 100) scale(1.1)"/>
+    <use href="#leaf" x="400" y="80" transform="rotate(45 400 80) scale(1.1)"/>
+    <use href="#leaf" x="480" y="100" transform="rotate(80 480 100) scale(1.1)"/>
+    <use href="#leaf" x="550" y="140" transform="rotate(105 550 140)"/>
+    <use href="#leaf" x="650" y="200" transform="rotate(130 650 200)"/>
+    <use href="#leaf" x="690" y="280" transform="rotate(150 690 280) scale(0.9)"/>
+    <use href="#leaf" x="670" y="370" transform="rotate(170 670 370)"/>
+    <use href="#leaf" x="620" y="420" transform="rotate(135 620 420) scale(0.8)"/>
+  </g>
+
+  <!-- LEUCHTENDE MAGISCHE BLÄTTER -->
+  <g filter="url(#glow)" scale="0.85">
+    <!-- Links (Cyan) -->
+    <g fill="url(#cyanGrad)">
+      <use href="#leaf" x="250" y="260" transform="rotate(-30 250 260)"/>
+      <use href="#leaf" x="200" y="320" transform="rotate(-60 200 320)"/>
+      <use href="#leaf" x="260" y="370" transform="rotate(-45 260 370) scale(0.9)"/>
+      <use href="#leaf" x="310" y="230" transform="rotate(-10 310 230)"/>
+    </g>
+    <!-- Rechts (Gold) -->
+    <g fill="url(#goldGrad)">
+      <use href="#leaf" x="550" y="260" transform="rotate(30 550 260)"/>
+      <use href="#leaf" x="600" y="320" transform="rotate(60 600 320)"/>
+      <use href="#leaf" x="540" y="370" transform="rotate(45 540 370) scale(0.9)"/>
+      <use href="#leaf" x="490" y="230" transform="rotate(10 490 230)"/>
+    </g>
+  </g>
+
+  <!-- LEUCHTPUNKTE / FUNKEN -->
+  <g filter="url(#glow)">
+    <circle cx="220" cy="280" r="4" fill="#bcfeff"/>
+    <circle cx="170" cy="390" r="3" fill="#e0f2fe"/>
+    <circle cx="290" cy="190" r="5" fill="#ffffff"/>
+    <circle cx="580" cy="280" r="4" fill="#fffb9f"/>
+    <circle cx="630" cy="390" r="3" fill="#fffdec"/>
+    <circle cx="510" cy="190" r="5" fill="#ffffff"/>
+    <circle cx="400" cy="460" r="3" fill="#fffb9f"/>
+    <circle cx="360" cy="520" r="2.5" fill="#e0f2fe"/>
+    <circle cx="430" cy="630" r="3" fill="#fde047"/>
+  </g>
+</svg>

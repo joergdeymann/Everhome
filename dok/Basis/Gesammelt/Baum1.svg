@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200"
+     width="200"
+     height="200">
+
+    <!-- Krone -->
+    <circle cx="100" cy="65" r="45" fill="#315c35"/>
+    <circle cx="65" cy="80" r="35" fill="#3f7543"/>
+    <circle cx="135" cy="80" r="35" fill="#3f7543"/>
+    <circle cx="100" cy="40" r="35" fill="#4d874c"/>
+
+    <!-- Stamm -->
+    <path d="M85 105 L115 105 L125 180
+             L75 180 Z"
+          fill="#70452b"/>
+
+    <!-- Äste -->
+    <path d="M100 125 L60 90
+             M100 125 L140 90"
+          stroke="#70452b"
+          stroke-width="12"
+          stroke-linecap="round"
+          fill="none"/>
+
+</svg>

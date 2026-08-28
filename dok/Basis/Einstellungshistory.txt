@@ -1,0 +1,7 @@
+22.08.2026
+- Einstellungen für Git
+- Git Repository Everhome erstellt
+- .gitattributes erstellt in Root
+- git config --global cor.autocrlf true aufgerufen
+- .gitignore erstellt in Root
+- git rm -r --cached server/node_modules/
